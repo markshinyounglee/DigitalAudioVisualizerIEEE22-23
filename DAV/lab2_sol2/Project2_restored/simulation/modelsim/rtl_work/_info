@@ -1,0 +1,74 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/simulation/modelsim
+T_opt
+!s110 1673650841
+VcQQT3l1gHkUFGl2TXbm4>1
+04 9 4 work tb_labTwo fast 0
+=1-ec63d7c74f43-63c1e299-1bc-59c4
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vminiALU
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1673650836
+!i10b 1
+!s100 QeAoS>kEFJ1?e]A0aGB7k1
+ILaG0:koYU9>Oz6eIIV0PB3
+S1
+R0
+w1669852031
+8C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/miniALU.sv
+FC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/miniALU.sv
+!i122 1
+L0 2 32
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z6 !s108 1673650836.000000
+!s107 C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/miniALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored|C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/miniALU.sv|
+!i113 0
+Z7 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -sv -work work {+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+nmini@a@l@u
+vtb_labTwo
+R2
+R3
+!i10b 1
+!s100 XkfDP[:4:jA[MWh5j;5IU1
+I6gWh43<zXWi^i`V^PbA7o3
+S1
+R0
+w1673650816
+8C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv
+FC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv
+!i122 0
+L0 5 38
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored|C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv|
+!i113 0
+R7
+R8
+R1
+ntb_lab@two

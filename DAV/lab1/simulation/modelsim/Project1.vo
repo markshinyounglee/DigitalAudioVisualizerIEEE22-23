@@ -1,0 +1,3471 @@
+// Copyright (C) 2021  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition"
+
+// DATE "01/10/2023 00:06:21"
+
+// 
+// Device: Altera 10M50DAF484C7G Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module tb_DecodeMessage (
+	recovered);
+output 	[191:0] recovered;
+
+// Design Ports Information
+// recovered[0]	=>  Location: PIN_R1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[1]	=>  Location: PIN_N4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[2]	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[3]	=>  Location: PIN_AB21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[4]	=>  Location: PIN_Y10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[5]	=>  Location: PIN_A4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[6]	=>  Location: PIN_U2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[7]	=>  Location: PIN_C14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[8]	=>  Location: PIN_AB16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[9]	=>  Location: PIN_T20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[10]	=>  Location: PIN_D3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[11]	=>  Location: PIN_C19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[12]	=>  Location: PIN_P10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[13]	=>  Location: PIN_P4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[14]	=>  Location: PIN_AB4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[15]	=>  Location: PIN_E21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[16]	=>  Location: PIN_K19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[17]	=>  Location: PIN_V10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[18]	=>  Location: PIN_N22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[19]	=>  Location: PIN_J8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[20]	=>  Location: PIN_P14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[21]	=>  Location: PIN_T22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[22]	=>  Location: PIN_AB9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[23]	=>  Location: PIN_AB5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[24]	=>  Location: PIN_A12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[25]	=>  Location: PIN_V17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[26]	=>  Location: PIN_W6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[27]	=>  Location: PIN_V15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[28]	=>  Location: PIN_V4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[29]	=>  Location: PIN_D6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[30]	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[31]	=>  Location: PIN_V1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[32]	=>  Location: PIN_B17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[33]	=>  Location: PIN_C3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[34]	=>  Location: PIN_M14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[35]	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[36]	=>  Location: PIN_AA5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[37]	=>  Location: PIN_U7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[38]	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[39]	=>  Location: PIN_C2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[40]	=>  Location: PIN_Y3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[41]	=>  Location: PIN_R11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[42]	=>  Location: PIN_K6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[43]	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[44]	=>  Location: PIN_J22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[45]	=>  Location: PIN_AB17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[46]	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[47]	=>  Location: PIN_AB10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[48]	=>  Location: PIN_J3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[49]	=>  Location: PIN_V9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[50]	=>  Location: PIN_Y17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[51]	=>  Location: PIN_W14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[52]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[53]	=>  Location: PIN_P5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[54]	=>  Location: PIN_K22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[55]	=>  Location: PIN_Y16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[56]	=>  Location: PIN_W18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[57]	=>  Location: PIN_E14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[58]	=>  Location: PIN_U6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[59]	=>  Location: PIN_V20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[60]	=>  Location: PIN_G17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[61]	=>  Location: PIN_A18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[62]	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[63]	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[64]	=>  Location: PIN_B19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[65]	=>  Location: PIN_W19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[66]	=>  Location: PIN_V18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[67]	=>  Location: PIN_AA1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[68]	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[69]	=>  Location: PIN_W9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[70]	=>  Location: PIN_V5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[71]	=>  Location: PIN_A19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[72]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[73]	=>  Location: PIN_K15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[74]	=>  Location: PIN_E11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[75]	=>  Location: PIN_M4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[76]	=>  Location: PIN_Y8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[77]	=>  Location: PIN_AB20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[78]	=>  Location: PIN_F18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[79]	=>  Location: PIN_Y2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[80]	=>  Location: PIN_AB3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[81]	=>  Location: PIN_B1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[82]	=>  Location: PIN_P12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[83]	=>  Location: PIN_AA19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[84]	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[85]	=>  Location: PIN_D5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[86]	=>  Location: PIN_A16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[87]	=>  Location: PIN_F2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[88]	=>  Location: PIN_G20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[89]	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[90]	=>  Location: PIN_B21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[91]	=>  Location: PIN_T3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[92]	=>  Location: PIN_AA16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[93]	=>  Location: PIN_A9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[94]	=>  Location: PIN_A6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[95]	=>  Location: PIN_U3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[96]	=>  Location: PIN_W22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[97]	=>  Location: PIN_R9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[98]	=>  Location: PIN_V3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[99]	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[100]	=>  Location: PIN_W1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[101]	=>  Location: PIN_K20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[102]	=>  Location: PIN_L9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[103]	=>  Location: PIN_R13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[104]	=>  Location: PIN_K5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[105]	=>  Location: PIN_P21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[106]	=>  Location: PIN_T5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[107]	=>  Location: PIN_V22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[108]	=>  Location: PIN_E3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[109]	=>  Location: PIN_N1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[110]	=>  Location: PIN_J21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[111]	=>  Location: PIN_B14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[112]	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[113]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[114]	=>  Location: PIN_AA7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[115]	=>  Location: PIN_V11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[116]	=>  Location: PIN_U15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[117]	=>  Location: PIN_D18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[118]	=>  Location: PIN_R15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[119]	=>  Location: PIN_K21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[120]	=>  Location: PIN_C5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[121]	=>  Location: PIN_C18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[122]	=>  Location: PIN_U1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[123]	=>  Location: PIN_E20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[124]	=>  Location: PIN_R4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[125]	=>  Location: PIN_F5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[126]	=>  Location: PIN_A15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[127]	=>  Location: PIN_G3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[128]	=>  Location: PIN_R14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[129]	=>  Location: PIN_W10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[130]	=>  Location: PIN_W13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[131]	=>  Location: PIN_Y11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[132]	=>  Location: PIN_J9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[133]	=>  Location: PIN_N3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[134]	=>  Location: PIN_N21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[135]	=>  Location: PIN_G1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[136]	=>  Location: PIN_AB7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[137]	=>  Location: PIN_AB8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[138]	=>  Location: PIN_Y20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[139]	=>  Location: PIN_H18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[140]	=>  Location: PIN_R20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[141]	=>  Location: PIN_B11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[142]	=>  Location: PIN_B2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[143]	=>  Location: PIN_B16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[144]	=>  Location: PIN_T19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[145]	=>  Location: PIN_V12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[146]	=>  Location: PIN_F20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[147]	=>  Location: PIN_K8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[148]	=>  Location: PIN_R10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[149]	=>  Location: PIN_P13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[150]	=>  Location: PIN_W7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[151]	=>  Location: PIN_B7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[152]	=>  Location: PIN_AA8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[153]	=>  Location: PIN_AB13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[154]	=>  Location: PIN_C9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[155]	=>  Location: PIN_D10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[156]	=>  Location: PIN_W3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[157]	=>  Location: PIN_U22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[158]	=>  Location: PIN_B20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[159]	=>  Location: PIN_AA9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[160]	=>  Location: PIN_A14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[161]	=>  Location: PIN_A20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[162]	=>  Location: PIN_AB2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[163]	=>  Location: PIN_J13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[164]	=>  Location: PIN_B4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[165]	=>  Location: PIN_Y19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[166]	=>  Location: PIN_AA3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[167]	=>  Location: PIN_L20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[168]	=>  Location: PIN_T18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[169]	=>  Location: PIN_AA17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[170]	=>  Location: PIN_AB15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[171]	=>  Location: PIN_W8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[172]	=>  Location: PIN_N2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[173]	=>  Location: PIN_T6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[174]	=>  Location: PIN_C13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[175]	=>  Location: PIN_W17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[176]	=>  Location: PIN_H14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[177]	=>  Location: PIN_V21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[178]	=>  Location: PIN_A13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[179]	=>  Location: PIN_A8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[180]	=>  Location: PIN_AA6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[181]	=>  Location: PIN_Y5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[182]	=>  Location: PIN_P19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[183]	=>  Location: PIN_H17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[184]	=>  Location: PIN_H13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[185]	=>  Location: PIN_D7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[186]	=>  Location: PIN_F16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[187]	=>  Location: PIN_B8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[188]	=>  Location: PIN_C12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[189]	=>  Location: PIN_J20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[190]	=>  Location: PIN_H12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// recovered[191]	=>  Location: PIN_M2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \~QUARTUS_CREATED_UNVM~~busy ;
+wire \~QUARTUS_CREATED_ADC1~~eoc ;
+wire \~QUARTUS_CREATED_ADC2~~eoc ;
+wire \recovered[0]~output_o ;
+wire \recovered[1]~output_o ;
+wire \recovered[2]~output_o ;
+wire \recovered[3]~output_o ;
+wire \recovered[4]~output_o ;
+wire \recovered[5]~output_o ;
+wire \recovered[6]~output_o ;
+wire \recovered[7]~output_o ;
+wire \recovered[8]~output_o ;
+wire \recovered[9]~output_o ;
+wire \recovered[10]~output_o ;
+wire \recovered[11]~output_o ;
+wire \recovered[12]~output_o ;
+wire \recovered[13]~output_o ;
+wire \recovered[14]~output_o ;
+wire \recovered[15]~output_o ;
+wire \recovered[16]~output_o ;
+wire \recovered[17]~output_o ;
+wire \recovered[18]~output_o ;
+wire \recovered[19]~output_o ;
+wire \recovered[20]~output_o ;
+wire \recovered[21]~output_o ;
+wire \recovered[22]~output_o ;
+wire \recovered[23]~output_o ;
+wire \recovered[24]~output_o ;
+wire \recovered[25]~output_o ;
+wire \recovered[26]~output_o ;
+wire \recovered[27]~output_o ;
+wire \recovered[28]~output_o ;
+wire \recovered[29]~output_o ;
+wire \recovered[30]~output_o ;
+wire \recovered[31]~output_o ;
+wire \recovered[32]~output_o ;
+wire \recovered[33]~output_o ;
+wire \recovered[34]~output_o ;
+wire \recovered[35]~output_o ;
+wire \recovered[36]~output_o ;
+wire \recovered[37]~output_o ;
+wire \recovered[38]~output_o ;
+wire \recovered[39]~output_o ;
+wire \recovered[40]~output_o ;
+wire \recovered[41]~output_o ;
+wire \recovered[42]~output_o ;
+wire \recovered[43]~output_o ;
+wire \recovered[44]~output_o ;
+wire \recovered[45]~output_o ;
+wire \recovered[46]~output_o ;
+wire \recovered[47]~output_o ;
+wire \recovered[48]~output_o ;
+wire \recovered[49]~output_o ;
+wire \recovered[50]~output_o ;
+wire \recovered[51]~output_o ;
+wire \recovered[52]~output_o ;
+wire \recovered[53]~output_o ;
+wire \recovered[54]~output_o ;
+wire \recovered[55]~output_o ;
+wire \recovered[56]~output_o ;
+wire \recovered[57]~output_o ;
+wire \recovered[58]~output_o ;
+wire \recovered[59]~output_o ;
+wire \recovered[60]~output_o ;
+wire \recovered[61]~output_o ;
+wire \recovered[62]~output_o ;
+wire \recovered[63]~output_o ;
+wire \recovered[64]~output_o ;
+wire \recovered[65]~output_o ;
+wire \recovered[66]~output_o ;
+wire \recovered[67]~output_o ;
+wire \recovered[68]~output_o ;
+wire \recovered[69]~output_o ;
+wire \recovered[70]~output_o ;
+wire \recovered[71]~output_o ;
+wire \recovered[72]~output_o ;
+wire \recovered[73]~output_o ;
+wire \recovered[74]~output_o ;
+wire \recovered[75]~output_o ;
+wire \recovered[76]~output_o ;
+wire \recovered[77]~output_o ;
+wire \recovered[78]~output_o ;
+wire \recovered[79]~output_o ;
+wire \recovered[80]~output_o ;
+wire \recovered[81]~output_o ;
+wire \recovered[82]~output_o ;
+wire \recovered[83]~output_o ;
+wire \recovered[84]~output_o ;
+wire \recovered[85]~output_o ;
+wire \recovered[86]~output_o ;
+wire \recovered[87]~output_o ;
+wire \recovered[88]~output_o ;
+wire \recovered[89]~output_o ;
+wire \recovered[90]~output_o ;
+wire \recovered[91]~output_o ;
+wire \recovered[92]~output_o ;
+wire \recovered[93]~output_o ;
+wire \recovered[94]~output_o ;
+wire \recovered[95]~output_o ;
+wire \recovered[96]~output_o ;
+wire \recovered[97]~output_o ;
+wire \recovered[98]~output_o ;
+wire \recovered[99]~output_o ;
+wire \recovered[100]~output_o ;
+wire \recovered[101]~output_o ;
+wire \recovered[102]~output_o ;
+wire \recovered[103]~output_o ;
+wire \recovered[104]~output_o ;
+wire \recovered[105]~output_o ;
+wire \recovered[106]~output_o ;
+wire \recovered[107]~output_o ;
+wire \recovered[108]~output_o ;
+wire \recovered[109]~output_o ;
+wire \recovered[110]~output_o ;
+wire \recovered[111]~output_o ;
+wire \recovered[112]~output_o ;
+wire \recovered[113]~output_o ;
+wire \recovered[114]~output_o ;
+wire \recovered[115]~output_o ;
+wire \recovered[116]~output_o ;
+wire \recovered[117]~output_o ;
+wire \recovered[118]~output_o ;
+wire \recovered[119]~output_o ;
+wire \recovered[120]~output_o ;
+wire \recovered[121]~output_o ;
+wire \recovered[122]~output_o ;
+wire \recovered[123]~output_o ;
+wire \recovered[124]~output_o ;
+wire \recovered[125]~output_o ;
+wire \recovered[126]~output_o ;
+wire \recovered[127]~output_o ;
+wire \recovered[128]~output_o ;
+wire \recovered[129]~output_o ;
+wire \recovered[130]~output_o ;
+wire \recovered[131]~output_o ;
+wire \recovered[132]~output_o ;
+wire \recovered[133]~output_o ;
+wire \recovered[134]~output_o ;
+wire \recovered[135]~output_o ;
+wire \recovered[136]~output_o ;
+wire \recovered[137]~output_o ;
+wire \recovered[138]~output_o ;
+wire \recovered[139]~output_o ;
+wire \recovered[140]~output_o ;
+wire \recovered[141]~output_o ;
+wire \recovered[142]~output_o ;
+wire \recovered[143]~output_o ;
+wire \recovered[144]~output_o ;
+wire \recovered[145]~output_o ;
+wire \recovered[146]~output_o ;
+wire \recovered[147]~output_o ;
+wire \recovered[148]~output_o ;
+wire \recovered[149]~output_o ;
+wire \recovered[150]~output_o ;
+wire \recovered[151]~output_o ;
+wire \recovered[152]~output_o ;
+wire \recovered[153]~output_o ;
+wire \recovered[154]~output_o ;
+wire \recovered[155]~output_o ;
+wire \recovered[156]~output_o ;
+wire \recovered[157]~output_o ;
+wire \recovered[158]~output_o ;
+wire \recovered[159]~output_o ;
+wire \recovered[160]~output_o ;
+wire \recovered[161]~output_o ;
+wire \recovered[162]~output_o ;
+wire \recovered[163]~output_o ;
+wire \recovered[164]~output_o ;
+wire \recovered[165]~output_o ;
+wire \recovered[166]~output_o ;
+wire \recovered[167]~output_o ;
+wire \recovered[168]~output_o ;
+wire \recovered[169]~output_o ;
+wire \recovered[170]~output_o ;
+wire \recovered[171]~output_o ;
+wire \recovered[172]~output_o ;
+wire \recovered[173]~output_o ;
+wire \recovered[174]~output_o ;
+wire \recovered[175]~output_o ;
+wire \recovered[176]~output_o ;
+wire \recovered[177]~output_o ;
+wire \recovered[178]~output_o ;
+wire \recovered[179]~output_o ;
+wire \recovered[180]~output_o ;
+wire \recovered[181]~output_o ;
+wire \recovered[182]~output_o ;
+wire \recovered[183]~output_o ;
+wire \recovered[184]~output_o ;
+wire \recovered[185]~output_o ;
+wire \recovered[186]~output_o ;
+wire \recovered[187]~output_o ;
+wire \recovered[188]~output_o ;
+wire \recovered[189]~output_o ;
+wire \recovered[190]~output_o ;
+wire \recovered[191]~output_o ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: LCCOMB_X44_Y41_N8
+fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+// \~QUARTUS_CREATED_GND~I_combout  = GND
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.cout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 16'h0000;
+defparam \~QUARTUS_CREATED_GND~I .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y3_N2
+fiftyfivenm_io_obuf \recovered[0]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[0]~output .bus_hold = "false";
+defparam \recovered[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y23_N16
+fiftyfivenm_io_obuf \recovered[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[1]~output .bus_hold = "false";
+defparam \recovered[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y18_N23
+fiftyfivenm_io_obuf \recovered[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[2]~output .bus_hold = "false";
+defparam \recovered[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X62_Y0_N30
+fiftyfivenm_io_obuf \recovered[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[3]~output .bus_hold = "false";
+defparam \recovered[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y0_N9
+fiftyfivenm_io_obuf \recovered[4]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[4]~output .bus_hold = "false";
+defparam \recovered[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y39_N23
+fiftyfivenm_io_obuf \recovered[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[5]~output .bus_hold = "false";
+defparam \recovered[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y12_N23
+fiftyfivenm_io_obuf \recovered[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[6]~output .bus_hold = "false";
+defparam \recovered[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y54_N16
+fiftyfivenm_io_obuf \recovered[7]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[7]~output .bus_hold = "false";
+defparam \recovered[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y0_N2
+fiftyfivenm_io_obuf \recovered[8]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[8]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[8]~output .bus_hold = "false";
+defparam \recovered[8]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y20_N9
+fiftyfivenm_io_obuf \recovered[9]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[9]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[9]~output .bus_hold = "false";
+defparam \recovered[9]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y30_N2
+fiftyfivenm_io_obuf \recovered[10]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[10]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[10]~output .bus_hold = "false";
+defparam \recovered[10]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X69_Y54_N9
+fiftyfivenm_io_obuf \recovered[11]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[11]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[11]~output .bus_hold = "false";
+defparam \recovered[11]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y0_N9
+fiftyfivenm_io_obuf \recovered[12]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[12]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[12]~output .bus_hold = "false";
+defparam \recovered[12]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y23_N2
+fiftyfivenm_io_obuf \recovered[13]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[13]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[13]~output .bus_hold = "false";
+defparam \recovered[13]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y0_N23
+fiftyfivenm_io_obuf \recovered[14]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[14]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[14]~output .bus_hold = "false";
+defparam \recovered[14]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y33_N2
+fiftyfivenm_io_obuf \recovered[15]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[15]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[15]~output .bus_hold = "false";
+defparam \recovered[15]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y42_N9
+fiftyfivenm_io_obuf \recovered[16]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[16]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[16]~output .bus_hold = "false";
+defparam \recovered[16]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y0_N23
+fiftyfivenm_io_obuf \recovered[17]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[17]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[17]~output .bus_hold = "false";
+defparam \recovered[17]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y23_N2
+fiftyfivenm_io_obuf \recovered[18]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[18]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[18]~output .bus_hold = "false";
+defparam \recovered[18]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y36_N16
+fiftyfivenm_io_obuf \recovered[19]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[19]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[19]~output .bus_hold = "false";
+defparam \recovered[19]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y23_N16
+fiftyfivenm_io_obuf \recovered[20]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[20]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[20]~output .bus_hold = "false";
+defparam \recovered[20]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y18_N2
+fiftyfivenm_io_obuf \recovered[21]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[21]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[21]~output .bus_hold = "false";
+defparam \recovered[21]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y0_N16
+fiftyfivenm_io_obuf \recovered[22]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[22]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[22]~output .bus_hold = "false";
+defparam \recovered[22]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y0_N30
+fiftyfivenm_io_obuf \recovered[23]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[23]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[23]~output .bus_hold = "false";
+defparam \recovered[23]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y54_N23
+fiftyfivenm_io_obuf \recovered[24]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[24]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[24]~output .bus_hold = "false";
+defparam \recovered[24]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X69_Y0_N2
+fiftyfivenm_io_obuf \recovered[25]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[25]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[25]~output .bus_hold = "false";
+defparam \recovered[25]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y0_N30
+fiftyfivenm_io_obuf \recovered[26]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[26]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[26]~output .bus_hold = "false";
+defparam \recovered[26]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y0_N2
+fiftyfivenm_io_obuf \recovered[27]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[27]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[27]~output .bus_hold = "false";
+defparam \recovered[27]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N16
+fiftyfivenm_io_obuf \recovered[28]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[28]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[28]~output .bus_hold = "false";
+defparam \recovered[28]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y39_N30
+fiftyfivenm_io_obuf \recovered[29]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[29]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[29]~output .bus_hold = "false";
+defparam \recovered[29]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y29_N2
+fiftyfivenm_io_obuf \recovered[30]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[30]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[30]~output .bus_hold = "false";
+defparam \recovered[30]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y12_N9
+fiftyfivenm_io_obuf \recovered[31]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[31]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[31]~output .bus_hold = "false";
+defparam \recovered[31]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X69_Y54_N30
+fiftyfivenm_io_obuf \recovered[32]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[32]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[32]~output .bus_hold = "false";
+defparam \recovered[32]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X20_Y39_N9
+fiftyfivenm_io_obuf \recovered[33]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[33]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[33]~output .bus_hold = "false";
+defparam \recovered[33]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y33_N16
+fiftyfivenm_io_obuf \recovered[34]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[34]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[34]~output .bus_hold = "false";
+defparam \recovered[34]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y0_N30
+fiftyfivenm_io_obuf \recovered[35]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[35]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[35]~output .bus_hold = "false";
+defparam \recovered[35]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y0_N2
+fiftyfivenm_io_obuf \recovered[36]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[36]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[36]~output .bus_hold = "false";
+defparam \recovered[36]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y0_N2
+fiftyfivenm_io_obuf \recovered[37]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[37]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[37]~output .bus_hold = "false";
+defparam \recovered[37]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y39_N30
+fiftyfivenm_io_obuf \recovered[38]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[38]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[38]~output .bus_hold = "false";
+defparam \recovered[38]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X20_Y39_N16
+fiftyfivenm_io_obuf \recovered[39]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[39]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[39]~output .bus_hold = "false";
+defparam \recovered[39]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X24_Y0_N23
+fiftyfivenm_io_obuf \recovered[40]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[40]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[40]~output .bus_hold = "false";
+defparam \recovered[40]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y0_N2
+fiftyfivenm_io_obuf \recovered[41]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[41]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[41]~output .bus_hold = "false";
+defparam \recovered[41]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y34_N23
+fiftyfivenm_io_obuf \recovered[42]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[42]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[42]~output .bus_hold = "false";
+defparam \recovered[42]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y0_N23
+fiftyfivenm_io_obuf \recovered[43]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[43]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[43]~output .bus_hold = "false";
+defparam \recovered[43]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y30_N9
+fiftyfivenm_io_obuf \recovered[44]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[44]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[44]~output .bus_hold = "false";
+defparam \recovered[44]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X69_Y0_N23
+fiftyfivenm_io_obuf \recovered[45]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[45]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[45]~output .bus_hold = "false";
+defparam \recovered[45]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y34_N9
+fiftyfivenm_io_obuf \recovered[46]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[46]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[46]~output .bus_hold = "false";
+defparam \recovered[46]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X38_Y0_N16
+fiftyfivenm_io_obuf \recovered[47]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[47]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[47]~output .bus_hold = "false";
+defparam \recovered[47]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y34_N9
+fiftyfivenm_io_obuf \recovered[48]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[48]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[48]~output .bus_hold = "false";
+defparam \recovered[48]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y0_N30
+fiftyfivenm_io_obuf \recovered[49]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[49]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[49]~output .bus_hold = "false";
+defparam \recovered[49]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y0_N23
+fiftyfivenm_io_obuf \recovered[50]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[50]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[50]~output .bus_hold = "false";
+defparam \recovered[50]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y0_N23
+fiftyfivenm_io_obuf \recovered[51]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[51]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[51]~output .bus_hold = "false";
+defparam \recovered[51]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y34_N16
+fiftyfivenm_io_obuf \recovered[52]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[52]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[52]~output .bus_hold = "false";
+defparam \recovered[52]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y23_N9
+fiftyfivenm_io_obuf \recovered[53]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[53]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[53]~output .bus_hold = "false";
+defparam \recovered[53]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y30_N23
+fiftyfivenm_io_obuf \recovered[54]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[54]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[54]~output .bus_hold = "false";
+defparam \recovered[54]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y0_N23
+fiftyfivenm_io_obuf \recovered[55]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[55]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[55]~output .bus_hold = "false";
+defparam \recovered[55]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X62_Y0_N9
+fiftyfivenm_io_obuf \recovered[56]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[56]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[56]~output .bus_hold = "false";
+defparam \recovered[56]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X66_Y54_N23
+fiftyfivenm_io_obuf \recovered[57]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[57]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[57]~output .bus_hold = "false";
+defparam \recovered[57]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y0_N9
+fiftyfivenm_io_obuf \recovered[58]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[58]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[58]~output .bus_hold = "false";
+defparam \recovered[58]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y17_N23
+fiftyfivenm_io_obuf \recovered[59]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[59]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[59]~output .bus_hold = "false";
+defparam \recovered[59]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y49_N16
+fiftyfivenm_io_obuf \recovered[60]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[60]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[60]~output .bus_hold = "false";
+defparam \recovered[60]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X66_Y54_N30
+fiftyfivenm_io_obuf \recovered[61]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[61]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[61]~output .bus_hold = "false";
+defparam \recovered[61]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y44_N16
+fiftyfivenm_io_obuf \recovered[62]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[62]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[62]~output .bus_hold = "false";
+defparam \recovered[62]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y23_N23
+fiftyfivenm_io_obuf \recovered[63]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[63]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[63]~output .bus_hold = "false";
+defparam \recovered[63]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X69_Y54_N16
+fiftyfivenm_io_obuf \recovered[64]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[64]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[64]~output .bus_hold = "false";
+defparam \recovered[64]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y16_N24
+fiftyfivenm_io_obuf \recovered[65]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[65]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[65]~output .bus_hold = "false";
+defparam \recovered[65]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y15_N23
+fiftyfivenm_io_obuf \recovered[66]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[66]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[66]~output .bus_hold = "false";
+defparam \recovered[66]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N30
+fiftyfivenm_io_obuf \recovered[67]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[67]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[67]~output .bus_hold = "false";
+defparam \recovered[67]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y29_N9
+fiftyfivenm_io_obuf \recovered[68]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[68]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[68]~output .bus_hold = "false";
+defparam \recovered[68]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y0_N2
+fiftyfivenm_io_obuf \recovered[69]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[69]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[69]~output .bus_hold = "false";
+defparam \recovered[69]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X14_Y0_N9
+fiftyfivenm_io_obuf \recovered[70]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[70]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[70]~output .bus_hold = "false";
+defparam \recovered[70]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X66_Y54_N9
+fiftyfivenm_io_obuf \recovered[71]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[71]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[71]~output .bus_hold = "false";
+defparam \recovered[71]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y25_N23
+fiftyfivenm_io_obuf \recovered[72]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[72]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[72]~output .bus_hold = "false";
+defparam \recovered[72]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y41_N16
+fiftyfivenm_io_obuf \recovered[73]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[73]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[73]~output .bus_hold = "false";
+defparam \recovered[73]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X36_Y39_N16
+fiftyfivenm_io_obuf \recovered[74]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[74]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[74]~output .bus_hold = "false";
+defparam \recovered[74]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y25_N16
+fiftyfivenm_io_obuf \recovered[75]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[75]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[75]~output .bus_hold = "false";
+defparam \recovered[75]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X20_Y0_N2
+fiftyfivenm_io_obuf \recovered[76]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[76]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[76]~output .bus_hold = "false";
+defparam \recovered[76]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X56_Y0_N2
+fiftyfivenm_io_obuf \recovered[77]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[77]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[77]~output .bus_hold = "false";
+defparam \recovered[77]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y40_N16
+fiftyfivenm_io_obuf \recovered[78]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[78]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[78]~output .bus_hold = "false";
+defparam \recovered[78]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y0_N16
+fiftyfivenm_io_obuf \recovered[79]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[79]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[79]~output .bus_hold = "false";
+defparam \recovered[79]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y0_N9
+fiftyfivenm_io_obuf \recovered[80]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[80]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[80]~output .bus_hold = "false";
+defparam \recovered[80]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y39_N23
+fiftyfivenm_io_obuf \recovered[81]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[81]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[81]~output .bus_hold = "false";
+defparam \recovered[81]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y0_N30
+fiftyfivenm_io_obuf \recovered[82]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[82]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[82]~output .bus_hold = "false";
+defparam \recovered[82]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y0_N16
+fiftyfivenm_io_obuf \recovered[83]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[83]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[83]~output .bus_hold = "false";
+defparam \recovered[83]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y54_N30
+fiftyfivenm_io_obuf \recovered[84]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[84]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[84]~output .bus_hold = "false";
+defparam \recovered[84]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X24_Y39_N30
+fiftyfivenm_io_obuf \recovered[85]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[85]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[85]~output .bus_hold = "false";
+defparam \recovered[85]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y54_N16
+fiftyfivenm_io_obuf \recovered[86]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[86]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[86]~output .bus_hold = "false";
+defparam \recovered[86]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y27_N9
+fiftyfivenm_io_obuf \recovered[87]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[87]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[87]~output .bus_hold = "false";
+defparam \recovered[87]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y31_N23
+fiftyfivenm_io_obuf \recovered[88]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[88]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[88]~output .bus_hold = "false";
+defparam \recovered[88]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y16_N2
+fiftyfivenm_io_obuf \recovered[89]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[89]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[89]~output .bus_hold = "false";
+defparam \recovered[89]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y43_N2
+fiftyfivenm_io_obuf \recovered[90]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[90]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[90]~output .bus_hold = "false";
+defparam \recovered[90]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y12_N16
+fiftyfivenm_io_obuf \recovered[91]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[91]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[91]~output .bus_hold = "false";
+defparam \recovered[91]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X56_Y0_N30
+fiftyfivenm_io_obuf \recovered[92]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[92]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[92]~output .bus_hold = "false";
+defparam \recovered[92]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y54_N23
+fiftyfivenm_io_obuf \recovered[93]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[93]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[93]~output .bus_hold = "false";
+defparam \recovered[93]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y39_N30
+fiftyfivenm_io_obuf \recovered[94]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[94]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[94]~output .bus_hold = "false";
+defparam \recovered[94]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y10_N2
+fiftyfivenm_io_obuf \recovered[95]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[95]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[95]~output .bus_hold = "false";
+defparam \recovered[95]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y15_N2
+fiftyfivenm_io_obuf \recovered[96]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[96]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[96]~output .bus_hold = "false";
+defparam \recovered[96]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y0_N30
+fiftyfivenm_io_obuf \recovered[97]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[97]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[97]~output .bus_hold = "false";
+defparam \recovered[97]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y10_N9
+fiftyfivenm_io_obuf \recovered[98]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[98]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[98]~output .bus_hold = "false";
+defparam \recovered[98]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y25_N2
+fiftyfivenm_io_obuf \recovered[99]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[99]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[99]~output .bus_hold = "false";
+defparam \recovered[99]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y9_N2
+fiftyfivenm_io_obuf \recovered[100]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[100]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[100]~output .bus_hold = "false";
+defparam \recovered[100]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y42_N2
+fiftyfivenm_io_obuf \recovered[101]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[101]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[101]~output .bus_hold = "false";
+defparam \recovered[101]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y27_N23
+fiftyfivenm_io_obuf \recovered[102]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[102]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[102]~output .bus_hold = "false";
+defparam \recovered[102]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y0_N2
+fiftyfivenm_io_obuf \recovered[103]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[103]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[103]~output .bus_hold = "false";
+defparam \recovered[103]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y34_N16
+fiftyfivenm_io_obuf \recovered[104]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[104]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[104]~output .bus_hold = "false";
+defparam \recovered[104]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y23_N9
+fiftyfivenm_io_obuf \recovered[105]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[105]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[105]~output .bus_hold = "false";
+defparam \recovered[105]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y3_N16
+fiftyfivenm_io_obuf \recovered[106]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[106]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[106]~output .bus_hold = "false";
+defparam \recovered[106]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y17_N2
+fiftyfivenm_io_obuf \recovered[107]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[107]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[107]~output .bus_hold = "false";
+defparam \recovered[107]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y37_N9
+fiftyfivenm_io_obuf \recovered[108]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[108]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[108]~output .bus_hold = "false";
+defparam \recovered[108]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y13_N9
+fiftyfivenm_io_obuf \recovered[109]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[109]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[109]~output .bus_hold = "false";
+defparam \recovered[109]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y30_N2
+fiftyfivenm_io_obuf \recovered[110]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[110]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[110]~output .bus_hold = "false";
+defparam \recovered[110]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X56_Y54_N2
+fiftyfivenm_io_obuf \recovered[111]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[111]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[111]~output .bus_hold = "false";
+defparam \recovered[111]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y39_N2
+fiftyfivenm_io_obuf \recovered[112]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[112]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[112]~output .bus_hold = "false";
+defparam \recovered[112]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X51_Y54_N16
+fiftyfivenm_io_obuf \recovered[113]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[113]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[113]~output .bus_hold = "false";
+defparam \recovered[113]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y0_N16
+fiftyfivenm_io_obuf \recovered[114]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[114]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[114]~output .bus_hold = "false";
+defparam \recovered[114]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X38_Y0_N30
+fiftyfivenm_io_obuf \recovered[115]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[115]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[115]~output .bus_hold = "false";
+defparam \recovered[115]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X56_Y0_N23
+fiftyfivenm_io_obuf \recovered[116]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[116]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[116]~output .bus_hold = "false";
+defparam \recovered[116]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y49_N9
+fiftyfivenm_io_obuf \recovered[117]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[117]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[117]~output .bus_hold = "false";
+defparam \recovered[117]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y18_N23
+fiftyfivenm_io_obuf \recovered[118]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[118]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[118]~output .bus_hold = "false";
+defparam \recovered[118]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y30_N16
+fiftyfivenm_io_obuf \recovered[119]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[119]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[119]~output .bus_hold = "false";
+defparam \recovered[119]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X24_Y39_N23
+fiftyfivenm_io_obuf \recovered[120]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[120]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[120]~output .bus_hold = "false";
+defparam \recovered[120]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X69_Y54_N23
+fiftyfivenm_io_obuf \recovered[121]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[121]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[121]~output .bus_hold = "false";
+defparam \recovered[121]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y12_N2
+fiftyfivenm_io_obuf \recovered[122]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[122]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[122]~output .bus_hold = "false";
+defparam \recovered[122]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y40_N2
+fiftyfivenm_io_obuf \recovered[123]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[123]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[123]~output .bus_hold = "false";
+defparam \recovered[123]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y15_N16
+fiftyfivenm_io_obuf \recovered[124]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[124]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[124]~output .bus_hold = "false";
+defparam \recovered[124]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y37_N16
+fiftyfivenm_io_obuf \recovered[125]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[125]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[125]~output .bus_hold = "false";
+defparam \recovered[125]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y54_N2
+fiftyfivenm_io_obuf \recovered[126]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[126]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[126]~output .bus_hold = "false";
+defparam \recovered[126]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y35_N9
+fiftyfivenm_io_obuf \recovered[127]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[127]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[127]~output .bus_hold = "false";
+defparam \recovered[127]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y18_N16
+fiftyfivenm_io_obuf \recovered[128]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[128]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[128]~output .bus_hold = "false";
+defparam \recovered[128]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X24_Y0_N30
+fiftyfivenm_io_obuf \recovered[129]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[129]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[129]~output .bus_hold = "false";
+defparam \recovered[129]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y0_N2
+fiftyfivenm_io_obuf \recovered[130]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[130]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[130]~output .bus_hold = "false";
+defparam \recovered[130]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X36_Y0_N2
+fiftyfivenm_io_obuf \recovered[131]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[131]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[131]~output .bus_hold = "false";
+defparam \recovered[131]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y36_N23
+fiftyfivenm_io_obuf \recovered[132]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[132]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[132]~output .bus_hold = "false";
+defparam \recovered[132]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y18_N2
+fiftyfivenm_io_obuf \recovered[133]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[133]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[133]~output .bus_hold = "false";
+defparam \recovered[133]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y25_N9
+fiftyfivenm_io_obuf \recovered[134]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[134]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[134]~output .bus_hold = "false";
+defparam \recovered[134]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y26_N2
+fiftyfivenm_io_obuf \recovered[135]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[135]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[135]~output .bus_hold = "false";
+defparam \recovered[135]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y0_N2
+fiftyfivenm_io_obuf \recovered[136]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[136]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[136]~output .bus_hold = "false";
+defparam \recovered[136]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y0_N9
+fiftyfivenm_io_obuf \recovered[137]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[137]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[137]~output .bus_hold = "false";
+defparam \recovered[137]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y16_N9
+fiftyfivenm_io_obuf \recovered[138]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[138]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[138]~output .bus_hold = "false";
+defparam \recovered[138]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y45_N16
+fiftyfivenm_io_obuf \recovered[139]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[139]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[139]~output .bus_hold = "false";
+defparam \recovered[139]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y20_N2
+fiftyfivenm_io_obuf \recovered[140]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[140]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[140]~output .bus_hold = "false";
+defparam \recovered[140]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y54_N9
+fiftyfivenm_io_obuf \recovered[141]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[141]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[141]~output .bus_hold = "false";
+defparam \recovered[141]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y39_N16
+fiftyfivenm_io_obuf \recovered[142]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[142]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[142]~output .bus_hold = "false";
+defparam \recovered[142]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y54_N9
+fiftyfivenm_io_obuf \recovered[143]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[143]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[143]~output .bus_hold = "false";
+defparam \recovered[143]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y20_N24
+fiftyfivenm_io_obuf \recovered[144]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[144]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[144]~output .bus_hold = "false";
+defparam \recovered[144]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X38_Y0_N23
+fiftyfivenm_io_obuf \recovered[145]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[145]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[145]~output .bus_hold = "false";
+defparam \recovered[145]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y35_N16
+fiftyfivenm_io_obuf \recovered[146]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[146]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[146]~output .bus_hold = "false";
+defparam \recovered[146]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y30_N16
+fiftyfivenm_io_obuf \recovered[147]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[147]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[147]~output .bus_hold = "false";
+defparam \recovered[147]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y0_N16
+fiftyfivenm_io_obuf \recovered[148]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[148]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[148]~output .bus_hold = "false";
+defparam \recovered[148]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X51_Y0_N30
+fiftyfivenm_io_obuf \recovered[149]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[149]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[149]~output .bus_hold = "false";
+defparam \recovered[149]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X24_Y0_N9
+fiftyfivenm_io_obuf \recovered[150]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[150]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[150]~output .bus_hold = "false";
+defparam \recovered[150]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y39_N23
+fiftyfivenm_io_obuf \recovered[151]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[151]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[151]~output .bus_hold = "false";
+defparam \recovered[151]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y0_N16
+fiftyfivenm_io_obuf \recovered[152]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[152]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[152]~output .bus_hold = "false";
+defparam \recovered[152]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y0_N16
+fiftyfivenm_io_obuf \recovered[153]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[153]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[153]~output .bus_hold = "false";
+defparam \recovered[153]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y54_N16
+fiftyfivenm_io_obuf \recovered[154]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[154]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[154]~output .bus_hold = "false";
+defparam \recovered[154]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X31_Y39_N30
+fiftyfivenm_io_obuf \recovered[155]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[155]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[155]~output .bus_hold = "false";
+defparam \recovered[155]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N9
+fiftyfivenm_io_obuf \recovered[156]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[156]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[156]~output .bus_hold = "false";
+defparam \recovered[156]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y21_N16
+fiftyfivenm_io_obuf \recovered[157]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[157]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[157]~output .bus_hold = "false";
+defparam \recovered[157]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y44_N9
+fiftyfivenm_io_obuf \recovered[158]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[158]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[158]~output .bus_hold = "false";
+defparam \recovered[158]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y0_N23
+fiftyfivenm_io_obuf \recovered[159]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[159]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[159]~output .bus_hold = "false";
+defparam \recovered[159]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y54_N30
+fiftyfivenm_io_obuf \recovered[160]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[160]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[160]~output .bus_hold = "false";
+defparam \recovered[160]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X66_Y54_N2
+fiftyfivenm_io_obuf \recovered[161]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[161]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[161]~output .bus_hold = "false";
+defparam \recovered[161]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y0_N16
+fiftyfivenm_io_obuf \recovered[162]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[162]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[162]~output .bus_hold = "false";
+defparam \recovered[162]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y54_N30
+fiftyfivenm_io_obuf \recovered[163]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[163]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[163]~output .bus_hold = "false";
+defparam \recovered[163]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y39_N23
+fiftyfivenm_io_obuf \recovered[164]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[164]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[164]~output .bus_hold = "false";
+defparam \recovered[164]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X62_Y0_N16
+fiftyfivenm_io_obuf \recovered[165]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[165]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[165]~output .bus_hold = "false";
+defparam \recovered[165]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X26_Y0_N30
+fiftyfivenm_io_obuf \recovered[166]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[166]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[166]~output .bus_hold = "false";
+defparam \recovered[166]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y37_N2
+fiftyfivenm_io_obuf \recovered[167]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[167]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[167]~output .bus_hold = "false";
+defparam \recovered[167]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y20_N16
+fiftyfivenm_io_obuf \recovered[168]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[168]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[168]~output .bus_hold = "false";
+defparam \recovered[168]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y0_N30
+fiftyfivenm_io_obuf \recovered[169]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[169]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[169]~output .bus_hold = "false";
+defparam \recovered[169]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X51_Y0_N16
+fiftyfivenm_io_obuf \recovered[170]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[170]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[170]~output .bus_hold = "false";
+defparam \recovered[170]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X24_Y0_N2
+fiftyfivenm_io_obuf \recovered[171]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[171]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[171]~output .bus_hold = "false";
+defparam \recovered[171]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y18_N9
+fiftyfivenm_io_obuf \recovered[172]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[172]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[172]~output .bus_hold = "false";
+defparam \recovered[172]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y3_N23
+fiftyfivenm_io_obuf \recovered[173]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[173]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[173]~output .bus_hold = "false";
+defparam \recovered[173]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X58_Y54_N23
+fiftyfivenm_io_obuf \recovered[174]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[174]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[174]~output .bus_hold = "false";
+defparam \recovered[174]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X69_Y0_N9
+fiftyfivenm_io_obuf \recovered[175]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[175]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[175]~output .bus_hold = "false";
+defparam \recovered[175]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y54_N23
+fiftyfivenm_io_obuf \recovered[176]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[176]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[176]~output .bus_hold = "false";
+defparam \recovered[176]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y17_N9
+fiftyfivenm_io_obuf \recovered[177]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[177]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[177]~output .bus_hold = "false";
+defparam \recovered[177]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y54_N16
+fiftyfivenm_io_obuf \recovered[178]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[178]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[178]~output .bus_hold = "false";
+defparam \recovered[178]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y54_N2
+fiftyfivenm_io_obuf \recovered[179]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[179]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[179]~output .bus_hold = "false";
+defparam \recovered[179]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y0_N23
+fiftyfivenm_io_obuf \recovered[180]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[180]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[180]~output .bus_hold = "false";
+defparam \recovered[180]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X18_Y0_N2
+fiftyfivenm_io_obuf \recovered[181]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[181]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[181]~output .bus_hold = "false";
+defparam \recovered[181]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y24_N9
+fiftyfivenm_io_obuf \recovered[182]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[182]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[182]~output .bus_hold = "false";
+defparam \recovered[182]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y49_N23
+fiftyfivenm_io_obuf \recovered[183]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[183]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[183]~output .bus_hold = "false";
+defparam \recovered[183]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y54_N2
+fiftyfivenm_io_obuf \recovered[184]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[184]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[184]~output .bus_hold = "false";
+defparam \recovered[184]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X29_Y39_N16
+fiftyfivenm_io_obuf \recovered[185]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[185]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[185]~output .bus_hold = "false";
+defparam \recovered[185]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X71_Y54_N30
+fiftyfivenm_io_obuf \recovered[186]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[186]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[186]~output .bus_hold = "false";
+defparam \recovered[186]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X46_Y54_N30
+fiftyfivenm_io_obuf \recovered[187]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[187]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[187]~output .bus_hold = "false";
+defparam \recovered[187]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X54_Y54_N30
+fiftyfivenm_io_obuf \recovered[188]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[188]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[188]~output .bus_hold = "false";
+defparam \recovered[188]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X78_Y45_N9
+fiftyfivenm_io_obuf \recovered[189]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[189]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[189]~output .bus_hold = "false";
+defparam \recovered[189]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X49_Y54_N16
+fiftyfivenm_io_obuf \recovered[190]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[190]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[190]~output .bus_hold = "false";
+defparam \recovered[190]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y16_N2
+fiftyfivenm_io_obuf \recovered[191]~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\recovered[191]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \recovered[191]~output .bus_hold = "false";
+defparam \recovered[191]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: UNVM_X0_Y40_N40
+fiftyfivenm_unvm \~QUARTUS_CREATED_UNVM~ (
+	.arclk(vcc),
+	.arshft(vcc),
+	.drclk(vcc),
+	.drshft(vcc),
+	.drdin(vcc),
+	.nprogram(vcc),
+	.nerase(vcc),
+	.nosc_ena(\~QUARTUS_CREATED_GND~I_combout ),
+	.par_en(vcc),
+	.xe_ye(\~QUARTUS_CREATED_GND~I_combout ),
+	.se(\~QUARTUS_CREATED_GND~I_combout ),
+	.ardin(23'b11111111111111111111111),
+	.busy(\~QUARTUS_CREATED_UNVM~~busy ),
+	.osc(),
+	.bgpbusy(),
+	.sp_pass(),
+	.se_pass(),
+	.drdout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range1_end_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range1_offset = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range2_end_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range2_offset = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range3_offset = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .is_compressed_image = "false";
+defparam \~QUARTUS_CREATED_UNVM~ .is_dual_boot = "false";
+defparam \~QUARTUS_CREATED_UNVM~ .is_eram_skip = "false";
+defparam \~QUARTUS_CREATED_UNVM~ .max_ufm_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .max_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .min_ufm_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .min_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .part_name = "quartus_created_unvm";
+defparam \~QUARTUS_CREATED_UNVM~ .reserve_block = "true";
+// synopsys translate_on
+
+// Location: ADCBLOCK_X43_Y52_N0
+fiftyfivenm_adcblock \~QUARTUS_CREATED_ADC1~ (
+	.soc(\~QUARTUS_CREATED_GND~I_combout ),
+	.usr_pwd(vcc),
+	.tsen(\~QUARTUS_CREATED_GND~I_combout ),
+	.clkin_from_pll_c0(gnd),
+	.chsel({\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout }),
+	.eoc(\~QUARTUS_CREATED_ADC1~~eoc ),
+	.dout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_ADC1~ .analog_input_pin_mask = 0;
+defparam \~QUARTUS_CREATED_ADC1~ .clkdiv = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .device_partname_fivechar_prefix = "none";
+defparam \~QUARTUS_CREATED_ADC1~ .is_this_first_or_second_adc = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .prescalar = 0;
+defparam \~QUARTUS_CREATED_ADC1~ .pwd = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .refsel = 0;
+defparam \~QUARTUS_CREATED_ADC1~ .reserve_block = "true";
+defparam \~QUARTUS_CREATED_ADC1~ .testbits = 66;
+defparam \~QUARTUS_CREATED_ADC1~ .tsclkdiv = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .tsclksel = 0;
+// synopsys translate_on
+
+// Location: ADCBLOCK_X43_Y51_N0
+fiftyfivenm_adcblock \~QUARTUS_CREATED_ADC2~ (
+	.soc(\~QUARTUS_CREATED_GND~I_combout ),
+	.usr_pwd(vcc),
+	.tsen(\~QUARTUS_CREATED_GND~I_combout ),
+	.clkin_from_pll_c0(gnd),
+	.chsel({\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout }),
+	.eoc(\~QUARTUS_CREATED_ADC2~~eoc ),
+	.dout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_ADC2~ .analog_input_pin_mask = 0;
+defparam \~QUARTUS_CREATED_ADC2~ .clkdiv = 1;
+defparam \~QUARTUS_CREATED_ADC2~ .device_partname_fivechar_prefix = "none";
+defparam \~QUARTUS_CREATED_ADC2~ .is_this_first_or_second_adc = 2;
+defparam \~QUARTUS_CREATED_ADC2~ .prescalar = 0;
+defparam \~QUARTUS_CREATED_ADC2~ .pwd = 1;
+defparam \~QUARTUS_CREATED_ADC2~ .refsel = 0;
+defparam \~QUARTUS_CREATED_ADC2~ .reserve_block = "true";
+defparam \~QUARTUS_CREATED_ADC2~ .testbits = 66;
+defparam \~QUARTUS_CREATED_ADC2~ .tsclkdiv = 1;
+defparam \~QUARTUS_CREATED_ADC2~ .tsclksel = 0;
+// synopsys translate_on
+
+assign recovered[0] = \recovered[0]~output_o ;
+
+assign recovered[1] = \recovered[1]~output_o ;
+
+assign recovered[2] = \recovered[2]~output_o ;
+
+assign recovered[3] = \recovered[3]~output_o ;
+
+assign recovered[4] = \recovered[4]~output_o ;
+
+assign recovered[5] = \recovered[5]~output_o ;
+
+assign recovered[6] = \recovered[6]~output_o ;
+
+assign recovered[7] = \recovered[7]~output_o ;
+
+assign recovered[8] = \recovered[8]~output_o ;
+
+assign recovered[9] = \recovered[9]~output_o ;
+
+assign recovered[10] = \recovered[10]~output_o ;
+
+assign recovered[11] = \recovered[11]~output_o ;
+
+assign recovered[12] = \recovered[12]~output_o ;
+
+assign recovered[13] = \recovered[13]~output_o ;
+
+assign recovered[14] = \recovered[14]~output_o ;
+
+assign recovered[15] = \recovered[15]~output_o ;
+
+assign recovered[16] = \recovered[16]~output_o ;
+
+assign recovered[17] = \recovered[17]~output_o ;
+
+assign recovered[18] = \recovered[18]~output_o ;
+
+assign recovered[19] = \recovered[19]~output_o ;
+
+assign recovered[20] = \recovered[20]~output_o ;
+
+assign recovered[21] = \recovered[21]~output_o ;
+
+assign recovered[22] = \recovered[22]~output_o ;
+
+assign recovered[23] = \recovered[23]~output_o ;
+
+assign recovered[24] = \recovered[24]~output_o ;
+
+assign recovered[25] = \recovered[25]~output_o ;
+
+assign recovered[26] = \recovered[26]~output_o ;
+
+assign recovered[27] = \recovered[27]~output_o ;
+
+assign recovered[28] = \recovered[28]~output_o ;
+
+assign recovered[29] = \recovered[29]~output_o ;
+
+assign recovered[30] = \recovered[30]~output_o ;
+
+assign recovered[31] = \recovered[31]~output_o ;
+
+assign recovered[32] = \recovered[32]~output_o ;
+
+assign recovered[33] = \recovered[33]~output_o ;
+
+assign recovered[34] = \recovered[34]~output_o ;
+
+assign recovered[35] = \recovered[35]~output_o ;
+
+assign recovered[36] = \recovered[36]~output_o ;
+
+assign recovered[37] = \recovered[37]~output_o ;
+
+assign recovered[38] = \recovered[38]~output_o ;
+
+assign recovered[39] = \recovered[39]~output_o ;
+
+assign recovered[40] = \recovered[40]~output_o ;
+
+assign recovered[41] = \recovered[41]~output_o ;
+
+assign recovered[42] = \recovered[42]~output_o ;
+
+assign recovered[43] = \recovered[43]~output_o ;
+
+assign recovered[44] = \recovered[44]~output_o ;
+
+assign recovered[45] = \recovered[45]~output_o ;
+
+assign recovered[46] = \recovered[46]~output_o ;
+
+assign recovered[47] = \recovered[47]~output_o ;
+
+assign recovered[48] = \recovered[48]~output_o ;
+
+assign recovered[49] = \recovered[49]~output_o ;
+
+assign recovered[50] = \recovered[50]~output_o ;
+
+assign recovered[51] = \recovered[51]~output_o ;
+
+assign recovered[52] = \recovered[52]~output_o ;
+
+assign recovered[53] = \recovered[53]~output_o ;
+
+assign recovered[54] = \recovered[54]~output_o ;
+
+assign recovered[55] = \recovered[55]~output_o ;
+
+assign recovered[56] = \recovered[56]~output_o ;
+
+assign recovered[57] = \recovered[57]~output_o ;
+
+assign recovered[58] = \recovered[58]~output_o ;
+
+assign recovered[59] = \recovered[59]~output_o ;
+
+assign recovered[60] = \recovered[60]~output_o ;
+
+assign recovered[61] = \recovered[61]~output_o ;
+
+assign recovered[62] = \recovered[62]~output_o ;
+
+assign recovered[63] = \recovered[63]~output_o ;
+
+assign recovered[64] = \recovered[64]~output_o ;
+
+assign recovered[65] = \recovered[65]~output_o ;
+
+assign recovered[66] = \recovered[66]~output_o ;
+
+assign recovered[67] = \recovered[67]~output_o ;
+
+assign recovered[68] = \recovered[68]~output_o ;
+
+assign recovered[69] = \recovered[69]~output_o ;
+
+assign recovered[70] = \recovered[70]~output_o ;
+
+assign recovered[71] = \recovered[71]~output_o ;
+
+assign recovered[72] = \recovered[72]~output_o ;
+
+assign recovered[73] = \recovered[73]~output_o ;
+
+assign recovered[74] = \recovered[74]~output_o ;
+
+assign recovered[75] = \recovered[75]~output_o ;
+
+assign recovered[76] = \recovered[76]~output_o ;
+
+assign recovered[77] = \recovered[77]~output_o ;
+
+assign recovered[78] = \recovered[78]~output_o ;
+
+assign recovered[79] = \recovered[79]~output_o ;
+
+assign recovered[80] = \recovered[80]~output_o ;
+
+assign recovered[81] = \recovered[81]~output_o ;
+
+assign recovered[82] = \recovered[82]~output_o ;
+
+assign recovered[83] = \recovered[83]~output_o ;
+
+assign recovered[84] = \recovered[84]~output_o ;
+
+assign recovered[85] = \recovered[85]~output_o ;
+
+assign recovered[86] = \recovered[86]~output_o ;
+
+assign recovered[87] = \recovered[87]~output_o ;
+
+assign recovered[88] = \recovered[88]~output_o ;
+
+assign recovered[89] = \recovered[89]~output_o ;
+
+assign recovered[90] = \recovered[90]~output_o ;
+
+assign recovered[91] = \recovered[91]~output_o ;
+
+assign recovered[92] = \recovered[92]~output_o ;
+
+assign recovered[93] = \recovered[93]~output_o ;
+
+assign recovered[94] = \recovered[94]~output_o ;
+
+assign recovered[95] = \recovered[95]~output_o ;
+
+assign recovered[96] = \recovered[96]~output_o ;
+
+assign recovered[97] = \recovered[97]~output_o ;
+
+assign recovered[98] = \recovered[98]~output_o ;
+
+assign recovered[99] = \recovered[99]~output_o ;
+
+assign recovered[100] = \recovered[100]~output_o ;
+
+assign recovered[101] = \recovered[101]~output_o ;
+
+assign recovered[102] = \recovered[102]~output_o ;
+
+assign recovered[103] = \recovered[103]~output_o ;
+
+assign recovered[104] = \recovered[104]~output_o ;
+
+assign recovered[105] = \recovered[105]~output_o ;
+
+assign recovered[106] = \recovered[106]~output_o ;
+
+assign recovered[107] = \recovered[107]~output_o ;
+
+assign recovered[108] = \recovered[108]~output_o ;
+
+assign recovered[109] = \recovered[109]~output_o ;
+
+assign recovered[110] = \recovered[110]~output_o ;
+
+assign recovered[111] = \recovered[111]~output_o ;
+
+assign recovered[112] = \recovered[112]~output_o ;
+
+assign recovered[113] = \recovered[113]~output_o ;
+
+assign recovered[114] = \recovered[114]~output_o ;
+
+assign recovered[115] = \recovered[115]~output_o ;
+
+assign recovered[116] = \recovered[116]~output_o ;
+
+assign recovered[117] = \recovered[117]~output_o ;
+
+assign recovered[118] = \recovered[118]~output_o ;
+
+assign recovered[119] = \recovered[119]~output_o ;
+
+assign recovered[120] = \recovered[120]~output_o ;
+
+assign recovered[121] = \recovered[121]~output_o ;
+
+assign recovered[122] = \recovered[122]~output_o ;
+
+assign recovered[123] = \recovered[123]~output_o ;
+
+assign recovered[124] = \recovered[124]~output_o ;
+
+assign recovered[125] = \recovered[125]~output_o ;
+
+assign recovered[126] = \recovered[126]~output_o ;
+
+assign recovered[127] = \recovered[127]~output_o ;
+
+assign recovered[128] = \recovered[128]~output_o ;
+
+assign recovered[129] = \recovered[129]~output_o ;
+
+assign recovered[130] = \recovered[130]~output_o ;
+
+assign recovered[131] = \recovered[131]~output_o ;
+
+assign recovered[132] = \recovered[132]~output_o ;
+
+assign recovered[133] = \recovered[133]~output_o ;
+
+assign recovered[134] = \recovered[134]~output_o ;
+
+assign recovered[135] = \recovered[135]~output_o ;
+
+assign recovered[136] = \recovered[136]~output_o ;
+
+assign recovered[137] = \recovered[137]~output_o ;
+
+assign recovered[138] = \recovered[138]~output_o ;
+
+assign recovered[139] = \recovered[139]~output_o ;
+
+assign recovered[140] = \recovered[140]~output_o ;
+
+assign recovered[141] = \recovered[141]~output_o ;
+
+assign recovered[142] = \recovered[142]~output_o ;
+
+assign recovered[143] = \recovered[143]~output_o ;
+
+assign recovered[144] = \recovered[144]~output_o ;
+
+assign recovered[145] = \recovered[145]~output_o ;
+
+assign recovered[146] = \recovered[146]~output_o ;
+
+assign recovered[147] = \recovered[147]~output_o ;
+
+assign recovered[148] = \recovered[148]~output_o ;
+
+assign recovered[149] = \recovered[149]~output_o ;
+
+assign recovered[150] = \recovered[150]~output_o ;
+
+assign recovered[151] = \recovered[151]~output_o ;
+
+assign recovered[152] = \recovered[152]~output_o ;
+
+assign recovered[153] = \recovered[153]~output_o ;
+
+assign recovered[154] = \recovered[154]~output_o ;
+
+assign recovered[155] = \recovered[155]~output_o ;
+
+assign recovered[156] = \recovered[156]~output_o ;
+
+assign recovered[157] = \recovered[157]~output_o ;
+
+assign recovered[158] = \recovered[158]~output_o ;
+
+assign recovered[159] = \recovered[159]~output_o ;
+
+assign recovered[160] = \recovered[160]~output_o ;
+
+assign recovered[161] = \recovered[161]~output_o ;
+
+assign recovered[162] = \recovered[162]~output_o ;
+
+assign recovered[163] = \recovered[163]~output_o ;
+
+assign recovered[164] = \recovered[164]~output_o ;
+
+assign recovered[165] = \recovered[165]~output_o ;
+
+assign recovered[166] = \recovered[166]~output_o ;
+
+assign recovered[167] = \recovered[167]~output_o ;
+
+assign recovered[168] = \recovered[168]~output_o ;
+
+assign recovered[169] = \recovered[169]~output_o ;
+
+assign recovered[170] = \recovered[170]~output_o ;
+
+assign recovered[171] = \recovered[171]~output_o ;
+
+assign recovered[172] = \recovered[172]~output_o ;
+
+assign recovered[173] = \recovered[173]~output_o ;
+
+assign recovered[174] = \recovered[174]~output_o ;
+
+assign recovered[175] = \recovered[175]~output_o ;
+
+assign recovered[176] = \recovered[176]~output_o ;
+
+assign recovered[177] = \recovered[177]~output_o ;
+
+assign recovered[178] = \recovered[178]~output_o ;
+
+assign recovered[179] = \recovered[179]~output_o ;
+
+assign recovered[180] = \recovered[180]~output_o ;
+
+assign recovered[181] = \recovered[181]~output_o ;
+
+assign recovered[182] = \recovered[182]~output_o ;
+
+assign recovered[183] = \recovered[183]~output_o ;
+
+assign recovered[184] = \recovered[184]~output_o ;
+
+assign recovered[185] = \recovered[185]~output_o ;
+
+assign recovered[186] = \recovered[186]~output_o ;
+
+assign recovered[187] = \recovered[187]~output_o ;
+
+assign recovered[188] = \recovered[188]~output_o ;
+
+assign recovered[189] = \recovered[189]~output_o ;
+
+assign recovered[190] = \recovered[190]~output_o ;
+
+assign recovered[191] = \recovered[191]~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_TMS~	=>  Location: PIN_H2,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TCK~	=>  Location: PIN_G2,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TDI~	=>  Location: PIN_L4,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TDO~	=>  Location: PIN_M5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_CONFIG_SEL~	=>  Location: PIN_H10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCONFIG~	=>  Location: PIN_H9,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_nSTATUS~	=>  Location: PIN_G9,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_CONF_DONE~	=>  Location: PIN_F8,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_TMS~~padout ;
+wire \~ALTERA_TCK~~padout ;
+wire \~ALTERA_TDI~~padout ;
+wire \~ALTERA_CONFIG_SEL~~padout ;
+wire \~ALTERA_nCONFIG~~padout ;
+wire \~ALTERA_nSTATUS~~padout ;
+wire \~ALTERA_CONF_DONE~~padout ;
+wire \~ALTERA_TMS~~ibuf_o ;
+wire \~ALTERA_TCK~~ibuf_o ;
+wire \~ALTERA_TDI~~ibuf_o ;
+wire \~ALTERA_CONFIG_SEL~~ibuf_o ;
+wire \~ALTERA_nCONFIG~~ibuf_o ;
+wire \~ALTERA_nSTATUS~~ibuf_o ;
+wire \~ALTERA_CONF_DONE~~ibuf_o ;
+
+
+endmodule

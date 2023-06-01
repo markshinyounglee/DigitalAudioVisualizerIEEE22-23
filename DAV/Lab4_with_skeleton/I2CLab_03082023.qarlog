@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/I2CLab_03082023.qarlog
+
+Archive:	C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/I2CLab_03082023.qar
+Date:		Wed Mar  8 23:36:52 2023
+Quartus Prime		21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/I2C.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/I2CLab.qpf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/IOBuffer.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/assignment_defaults.qdf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/i2cClock.ppf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/i2cClock.qip
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/i2cClock.v
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/i2cClock_bb.v
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuckDriver.qsf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuckDriver.restore.rpt
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuckDriver.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuckDriver_assignment_defaults.qdf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuckDriver_tb.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuck_test.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuck_translator.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.flow.rpt
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.map.rpt
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.map.smsg
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.map.summary
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/pollingClock.sv
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sat Apr  8 12:57:28 2023
+Source archive file:	D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/I2CLab_03082023.qar
+Archive was extracted into	C:/Users/user/Documents/1 Mark Shinyoung Lee/_UCLA/2_sophomore year/Extracurriculars/DAV/Lab 4/
+		 - successfully.

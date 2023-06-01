@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/lab7_microphone_latest.qarlog
+
+Archive:	D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/lab7_microphone_latest.qar
+Date:		Thu Jun  1 01:50:52 2023
+Quartus Prime		21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone.qsys
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone.sopcinfo
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/adc_microphone.cmp
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/adc_microphone.debuginfo
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/adc_microphone.qip
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/adc_microphone.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/DE10_Lite_ADC_Core_modular_adc_0.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/adc_microphone_adc_mega_0.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_control.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_control_fsm.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_sample_store.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_sample_store_ram.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_sequencer.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_sequencer_csr.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_modular_adc_sequencer_ctrl.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/altera_up_avalon_adv_adc.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/chsel_code_converter_sw_to_hw.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/adc_microphone/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/lab7_microphone.qpf
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/lab7_microphone.qsf
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/lab7_microphone.sv
+c:/intelfpga_lite/21.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

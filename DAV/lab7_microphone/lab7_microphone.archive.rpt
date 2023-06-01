@@ -1,0 +1,100 @@
+Archive Project report for lab7_microphone
+Thu Jun  1 01:50:53 2023
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Jun  1 01:50:53 2023 ;
+; Revision Name          ; lab7_microphone                       ;
+; Top-level Entity Name  ; lab7_microphone                       ;
+; Family                 ; MAX 10                                ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab7_microphone/lab7_microphone_latest.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'lab7_microphone.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/21.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4834 megabytes
+    Info: Processing ended: Thu Jun  1 01:50:53 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------------------------------------------+
+; Files Archived                                                               ;
++------------------------------------------------------------------------------+
+; File Name                                                                    ;
++------------------------------------------------------------------------------+
+; adc_microphone/synthesis/../../adc_microphone.qsys                           ;
+; adc_microphone/synthesis/../../adc_microphone.sopcinfo                       ;
+; adc_microphone/synthesis/../adc_microphone.cmp                               ;
+; adc_microphone/synthesis/adc_microphone.debuginfo                            ;
+; adc_microphone/synthesis/adc_microphone.qip                                  ;
+; adc_microphone/synthesis/adc_microphone.v                                    ;
+; adc_microphone/synthesis/submodules/adc_microphone_adc_mega_0.v              ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_control.v             ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v   ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_control_fsm.v         ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_sample_store.v        ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_sample_store_ram.v    ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_sequencer.v           ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_sequencer_csr.v       ;
+; adc_microphone/synthesis/submodules/altera_modular_adc_sequencer_ctrl.v      ;
+; adc_microphone/synthesis/submodules/altera_up_avalon_adv_adc.v               ;
+; adc_microphone/synthesis/submodules/chsel_code_converter_sw_to_hw.v          ;
+; adc_microphone/synthesis/submodules/DE10_Lite_ADC_Core_modular_adc_0.v       ;
+; adc_microphone/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v ;
+; adc_microphone/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v       ;
+; c:/intelfpga_lite/21.1/quartus/bin64/assignment_defaults.qdf                 ;
+; lab7_microphone.qpf                                                          ;
+; lab7_microphone.qsf                                                          ;
+; lab7_microphone.sv                                                           ;
++------------------------------------------------------------------------------+
+
+

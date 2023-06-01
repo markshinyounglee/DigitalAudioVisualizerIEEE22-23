@@ -1,0 +1,14 @@
+
+State Machine - |fft_4point_tb|fft_16bit:UUT2|state
+Name state.11 state.STAGE2 state.STAGE1 state.RESET 
+state.RESET 0 0 0 0 
+state.STAGE1 0 0 1 1 
+state.STAGE2 0 1 0 1 
+state.11 1 0 0 1 
+
+State Machine - |fft_4point_tb|fft_32bit:UUT1|state
+Name state.11 state.STAGE2 state.RESET state.STAGE1 
+state.STAGE1 0 0 0 0 
+state.RESET 0 0 1 1 
+state.STAGE2 0 1 0 1 
+state.11 1 0 0 1 

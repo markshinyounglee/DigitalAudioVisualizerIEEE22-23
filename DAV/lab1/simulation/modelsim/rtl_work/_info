@@ -1,0 +1,126 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab1/simulation/modelsim
+T_opt
+!s110 1673338029
+VF38fh:HAoYMHVoG:YfACh0
+04 16 4 work tb_DecodeMessage fast 0
+=1-ec63d7c74f43-63bd1cac-172-fe0
+!s124 OEM10U4 
+o-quiet -auto_acc_if_foreign -work rtl_work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vdecodeMessage
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1673338023
+!i10b 1
+!s100 DiB>:93Nm6FULH<6GbjC?3
+IXFMP5MAQ`HTO7cnh7bWNW1
+S1
+R0
+Z4 w1667081765
+Z5 8C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/decodeMessage.sv
+Z6 FC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/decodeMessage.sv
+!i122 0
+L0 4 17
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z9 !s108 1673338022.000000
+Z10 !s107 C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/decodeMessage.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001|C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/decodeMessage.sv|
+!i113 0
+Z12 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 !s92 -sv -work work {+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+ndecode@message
+vpartOne
+R2
+R3
+!i10b 1
+!s100 FebLckcS5GN6;BDYWTm:N2
+II2W4]@a<oRZ>n@MX0cYN`2
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 25 44
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+npart@one
+vpartTwo
+R2
+R3
+!i10b 1
+!s100 _CF>=oRD35SD9k1b>j7d?0
+IRU]QE7efdmXgU:OR[c:5F3
+S1
+R0
+R4
+R5
+R6
+!i122 0
+L0 73 60
+R7
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R1
+npart@two
+vtb_DecodeMessage
+R2
+R3
+!i10b 1
+!s100 cbD19MDLAiWPN:AWPeTo?0
+I6kFbUnhlCfD_7a@P`V8L02
+S1
+R0
+w1666942454
+8C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/tb_DecodeMessage.sv
+FC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/tb_DecodeMessage.sv
+!i122 1
+L0 7 40
+R7
+R8
+r1
+!s85 0
+31
+!s108 1673338023.000000
+!s107 C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/tb_DecodeMessage.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001|C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/drive-download-20221026T223737Z-001/tb_DecodeMessage.sv|
+!i113 0
+R12
+R13
+R1
+ntb_@decode@message

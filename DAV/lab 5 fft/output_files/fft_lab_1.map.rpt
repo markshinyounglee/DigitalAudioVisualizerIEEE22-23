@@ -1,0 +1,783 @@
+Analysis & Synthesis report for fft_lab_1
+Mon May 29 15:26:25 2023
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |fft_4point_tb|fft_16bit:UUT2|state
+  9. State Machine - |fft_4point_tb|fft_32bit:UUT1|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Parameter Settings for User Entity Instance: fft_32bit:UUT1|butterfly:b1
+ 14. Parameter Settings for User Entity Instance: fft_32bit:UUT1|butterfly:b2
+ 15. Parameter Settings for User Entity Instance: fft_16bit:UUT2|butterfly:b1
+ 16. Parameter Settings for User Entity Instance: fft_16bit:UUT2|butterfly:b2
+ 17. Port Connectivity Checks: "fft_16bit:UUT2"
+ 18. Port Connectivity Checks: "fft_32bit:UUT1"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon May 29 15:26:25 2023       ;
+; Quartus Prime Version              ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Revision Name                      ; fft_lab_1                                   ;
+; Top-level Entity Name              ; fft_4point_tb                               ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 192                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; fft_4point_tb      ; fft_lab_1          ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; fft_4point_tb.sv                 ; yes             ; User SystemVerilog HDL File  ; D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv ;         ;
+; fft_32bit.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_32bit.sv     ;         ;
+; butterfly.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/butterfly.sv     ;         ;
+; fft_16bit.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv     ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+;                                             ;                ;
+; Total combinational functions               ; 0              ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 0              ;
+;     -- 3 input functions                    ; 0              ;
+;     -- <=2 input functions                  ; 0              ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 0              ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 192            ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; out0[0]~output ;
+; Maximum fan-out                             ; 1              ;
+; Total fan-out                               ; 192            ;
+; Average fan-out                             ; 0.50           ;
++---------------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
+; |fft_4point_tb             ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 192  ; 0            ; 0          ; |fft_4point_tb      ; fft_4point_tb ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------+
+; State Machine - |fft_4point_tb|fft_16bit:UUT2|state                 ;
++--------------+----------+--------------+--------------+-------------+
+; Name         ; state.11 ; state.STAGE2 ; state.STAGE1 ; state.RESET ;
++--------------+----------+--------------+--------------+-------------+
+; state.RESET  ; 0        ; 0            ; 0            ; 0           ;
+; state.STAGE1 ; 0        ; 0            ; 1            ; 1           ;
+; state.STAGE2 ; 0        ; 1            ; 0            ; 1           ;
+; state.11     ; 1        ; 0            ; 0            ; 1           ;
++--------------+----------+--------------+--------------+-------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------+
+; State Machine - |fft_4point_tb|fft_32bit:UUT1|state                 ;
++--------------+----------+--------------+-------------+--------------+
+; Name         ; state.11 ; state.STAGE2 ; state.RESET ; state.STAGE1 ;
++--------------+----------+--------------+-------------+--------------+
+; state.STAGE1 ; 0        ; 0            ; 0           ; 0            ;
+; state.RESET  ; 0        ; 0            ; 1           ; 1            ;
+; state.STAGE2 ; 0        ; 1            ; 0           ; 1            ;
+; state.11     ; 1        ; 0            ; 0           ; 1            ;
++--------------+----------+--------------+-------------+--------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++-----------------------------------------+--------------------------------------+
+; Register name                           ; Reason for Removal                   ;
++-----------------------------------------+--------------------------------------+
+; fft_16bit:UUT2|out3[0..15]              ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|out2[0..15]              ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|out1[0..15]              ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|out0[0..15]              ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|w2[0,8]                  ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|w1[0,8]                  ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|butterfly_2_in1[0,8]     ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|butterfly_2_in0[0..15]   ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|butterfly_1_in1[0,8]     ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|butterfly_1_in0[0..15]   ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|out3[0..31]              ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|out2[0..31]              ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|out1[0..31]              ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|out0[0..31]              ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|w2[0,16]                 ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|w1[0,16]                 ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|butterfly_2_in1[0..31]   ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|butterfly_2_in0[0..31]   ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|butterfly_1_in1[0..31]   ; Stuck at GND due to stuck port clock ;
+; fft_32bit:UUT1|butterfly_1_in0[0..31]   ; Stuck at GND due to stuck port clock ;
+; fft_16bit:UUT2|state.RESET              ; Lost fanout                          ;
+; fft_16bit:UUT2|state.11                 ; Lost fanout                          ;
+; fft_32bit:UUT1|state.RESET              ; Lost fanout                          ;
+; fft_32bit:UUT1|state.11                 ; Lost fanout                          ;
+; fft_16bit:UUT2|state~2                  ; Lost fanout                          ;
+; fft_16bit:UUT2|state~3                  ; Lost fanout                          ;
+; fft_16bit:UUT2|state.STAGE2             ; Lost fanout                          ;
+; fft_16bit:UUT2|state.STAGE1             ; Lost fanout                          ;
+; fft_32bit:UUT1|state~6                  ; Lost fanout                          ;
+; fft_32bit:UUT1|state~7                  ; Lost fanout                          ;
+; fft_32bit:UUT1|state.STAGE2             ; Lost fanout                          ;
+; fft_32bit:UUT1|state.STAGE1             ; Lost fanout                          ;
+; Total Number of Removed Registers = 376 ;                                      ;
++-----------------------------------------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                            ;
++------------------------------------+-------------------------+-------------------------------------------------------------------------+
+; Register name                      ; Reason for Removal      ; Registers Removed due to This Register                                  ;
++------------------------------------+-------------------------+-------------------------------------------------------------------------+
+; fft_16bit:UUT2|w1[0]               ; Stuck at GND            ; fft_16bit:UUT2|butterfly_2_in0[3], fft_16bit:UUT2|butterfly_2_in0[4],   ;
+;                                    ; due to stuck port clock ; fft_16bit:UUT2|butterfly_2_in0[5], fft_16bit:UUT2|butterfly_2_in0[6],   ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_2_in0[7], fft_16bit:UUT2|butterfly_2_in0[11],  ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_2_in0[12], fft_16bit:UUT2|butterfly_2_in0[13], ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_2_in0[14], fft_16bit:UUT2|butterfly_2_in0[15], ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_1_in0[3], fft_16bit:UUT2|butterfly_1_in0[4],   ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_1_in0[5], fft_16bit:UUT2|butterfly_1_in0[6],   ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_1_in0[7], fft_16bit:UUT2|butterfly_1_in0[11],  ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_1_in0[12], fft_16bit:UUT2|butterfly_1_in0[13], ;
+;                                    ;                         ; fft_16bit:UUT2|butterfly_1_in0[14], fft_16bit:UUT2|butterfly_1_in0[15]  ;
+; fft_32bit:UUT1|w2[0]               ; Stuck at GND            ; fft_32bit:UUT1|butterfly_2_in1[11], fft_32bit:UUT1|butterfly_2_in1[12], ;
+;                                    ; due to stuck port clock ; fft_32bit:UUT1|butterfly_2_in1[13], fft_32bit:UUT1|butterfly_2_in1[14], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_2_in1[15], fft_32bit:UUT1|butterfly_2_in1[27], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_2_in1[28], fft_32bit:UUT1|butterfly_2_in1[29], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_2_in1[30], fft_32bit:UUT1|butterfly_2_in1[31], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in1[11], fft_32bit:UUT1|butterfly_1_in1[12], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in1[13], fft_32bit:UUT1|butterfly_1_in1[14], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in1[15], fft_32bit:UUT1|butterfly_1_in1[27], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in1[28], fft_32bit:UUT1|butterfly_1_in1[29], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in1[30], fft_32bit:UUT1|butterfly_1_in1[31]  ;
+; fft_32bit:UUT1|w1[0]               ; Stuck at GND            ; fft_32bit:UUT1|butterfly_2_in0[11], fft_32bit:UUT1|butterfly_2_in0[12], ;
+;                                    ; due to stuck port clock ; fft_32bit:UUT1|butterfly_2_in0[13], fft_32bit:UUT1|butterfly_2_in0[14], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_2_in0[15], fft_32bit:UUT1|butterfly_2_in0[27], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_2_in0[28], fft_32bit:UUT1|butterfly_2_in0[29], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_2_in0[30], fft_32bit:UUT1|butterfly_2_in0[31], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in0[11], fft_32bit:UUT1|butterfly_1_in0[12], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in0[13], fft_32bit:UUT1|butterfly_1_in0[14], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in0[15], fft_32bit:UUT1|butterfly_1_in0[27], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in0[28], fft_32bit:UUT1|butterfly_1_in0[29], ;
+;                                    ;                         ; fft_32bit:UUT1|butterfly_1_in0[30], fft_32bit:UUT1|butterfly_1_in0[31]  ;
+; fft_16bit:UUT2|w2[0]               ; Stuck at GND            ; fft_16bit:UUT2|butterfly_2_in1[0], fft_16bit:UUT2|butterfly_2_in1[8],   ;
+;                                    ; due to stuck port clock ; fft_16bit:UUT2|butterfly_1_in1[0], fft_16bit:UUT2|butterfly_1_in1[8]    ;
+; fft_32bit:UUT1|butterfly_2_in0[0]  ; Stuck at GND            ; fft_32bit:UUT1|butterfly_1_in1[9], fft_32bit:UUT1|butterfly_1_in1[10]   ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_32bit:UUT1|butterfly_2_in0[16] ; Stuck at GND            ; fft_32bit:UUT1|butterfly_1_in1[25], fft_32bit:UUT1|butterfly_1_in1[26]  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|state.RESET         ; Lost Fanouts            ; fft_16bit:UUT2|state.STAGE2, fft_16bit:UUT2|state.STAGE1                ;
+; fft_32bit:UUT1|state.RESET         ; Lost Fanouts            ; fft_32bit:UUT1|state.STAGE2, fft_32bit:UUT1|state.STAGE1                ;
+; fft_16bit:UUT2|out3[1]             ; Stuck at GND            ; fft_16bit:UUT2|out2[1]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|out3[3]             ; Stuck at GND            ; fft_16bit:UUT2|out2[2]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|out3[5]             ; Stuck at GND            ; fft_16bit:UUT2|out2[3]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|out3[7]             ; Stuck at GND            ; fft_16bit:UUT2|out2[4]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|out3[9]             ; Stuck at GND            ; fft_16bit:UUT2|out2[5]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|out3[11]            ; Stuck at GND            ; fft_16bit:UUT2|out2[6]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|out3[13]            ; Stuck at GND            ; fft_16bit:UUT2|out2[7]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
+; fft_16bit:UUT2|out3[15]            ; Stuck at GND            ; fft_16bit:UUT2|out2[8]                                                  ;
+;                                    ; due to stuck port clock ;                                                                         ;
++------------------------------------+-------------------------+-------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fft_32bit:UUT1|butterfly:b1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fft_32bit:UUT1|butterfly:b2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fft_16bit:UUT2|butterfly:b1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fft_16bit:UUT2|butterfly:b2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fft_16bit:UUT2"                                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; in0  ; Input  ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "in0[31..16]" will be connected to GND. ;
+; in1  ; Input  ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "in1[31..16]" will be connected to GND. ;
+; in2  ; Input  ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "in2[31..16]" will be connected to GND. ;
+; in3  ; Input  ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "in3[31..16]" will be connected to GND. ;
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fft_32bit:UUT1"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 192                         ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Mon May 29 15:26:06 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fft_lab_1 -c fft_lab_1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fft_4point_tb.sv
+    Info (12023): Found entity 1: fft_4point_tb File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file fft_32bit.sv
+    Info (12023): Found entity 1: fft_32bit File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_32bit.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file butterfly.sv
+    Info (12023): Found entity 1: butterfly File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/butterfly.sv Line: 1
+Warning (10274): Verilog HDL macro warning at fft_16bit.sv(2): overriding existing definition for macro "w_0_4", which was defined in "fft_32bit.sv", line 2 File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 2
+Warning (10274): Verilog HDL macro warning at fft_16bit.sv(3): overriding existing definition for macro "w_1_4", which was defined in "fft_32bit.sv", line 3 File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 3
+Warning (10274): Verilog HDL macro warning at fft_16bit.sv(4): overriding existing definition for macro "w_0_2", which was defined in "fft_32bit.sv", line 4 File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file fft_16bit.sv
+    Info (12023): Found entity 1: fft_16bit File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 5
+Info (12127): Elaborating entity "fft_4point_tb" for the top level hierarchy
+Warning (10755): Verilog HDL warning at fft_4point_tb.sv(36): assignments to clk create a combinational loop File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 36
+Warning (10175): Verilog HDL warning at fft_4point_tb.sv(52): ignoring unsupported system task File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 52
+Info (12128): Elaborating entity "fft_32bit" for hierarchy "fft_32bit:UUT1" File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 55
+Warning (10230): Verilog HDL assignment warning at fft_32bit.sv(40): truncated value with size 32 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_32bit.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at fft_32bit.sv(61): truncated value with size 32 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_32bit.sv Line: 61
+Warning (10230): Verilog HDL assignment warning at fft_32bit.sv(68): truncated value with size 32 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_32bit.sv Line: 68
+Info (12128): Elaborating entity "butterfly" for hierarchy "fft_32bit:UUT1|butterfly:b1" File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_32bit.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at butterfly.sv(22): truncated value with size 16 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/butterfly.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at butterfly.sv(24): truncated value with size 16 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/butterfly.sv Line: 24
+Info (12128): Elaborating entity "fft_16bit" for hierarchy "fft_16bit:UUT2" File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 57
+Warning (10230): Verilog HDL assignment warning at fft_16bit.sv(40): truncated value with size 32 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at fft_16bit.sv(43): truncated value with size 32 to match size of target (16) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at fft_16bit.sv(44): truncated value with size 32 to match size of target (16) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at fft_16bit.sv(45): truncated value with size 32 to match size of target (16) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at fft_16bit.sv(46): truncated value with size 32 to match size of target (16) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at fft_16bit.sv(61): truncated value with size 32 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 61
+Info (12128): Elaborating entity "butterfly" for hierarchy "fft_16bit:UUT2|butterfly:b1" File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_16bit.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at butterfly.sv(22): truncated value with size 8 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/butterfly.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at butterfly.sv(24): truncated value with size 8 to match size of target (1) File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/butterfly.sv Line: 24
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 5
+    Warning (12110): Net "reset" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 6
+    Warning (12110): Net "start" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 7
+    Warning (12110): Net "in0[31]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[30]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[29]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[28]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[27]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[26]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[25]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[24]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[23]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[22]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[21]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[20]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[19]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[18]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[17]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in0[16]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 8
+    Warning (12110): Net "in1[31]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[30]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[29]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[28]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[27]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[26]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[25]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[24]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[23]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[22]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[21]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[20]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[19]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[18]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[17]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in1[16]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 9
+    Warning (12110): Net "in2[31]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[30]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[29]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[28]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[27]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[26]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[25]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[24]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[23]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[22]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[21]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[20]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[19]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[18]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[17]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in2[16]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 10
+    Warning (12110): Net "in3[31]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[30]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[29]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[28]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[27]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[26]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[25]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[24]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[23]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[22]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[21]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[20]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[19]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[18]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[17]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+    Warning (12110): Net "in3[16]" is missing source, defaulting to GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 11
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out0[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[16]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[17]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[18]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[19]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[20]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[21]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[22]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[23]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[24]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[25]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[26]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[27]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[28]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[29]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[30]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out0[31]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 13
+    Warning (13410): Pin "out1[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[16]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[17]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[18]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[19]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[20]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[21]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[22]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[23]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[24]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[25]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[26]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[27]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[28]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[29]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[30]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out1[31]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 14
+    Warning (13410): Pin "out2[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[16]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[17]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[18]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[19]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[20]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[21]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[22]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[23]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[24]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[25]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[26]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[27]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[28]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[29]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[30]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out2[31]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 15
+    Warning (13410): Pin "out3[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[16]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[17]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[18]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[19]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[20]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[21]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[22]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[23]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[24]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[25]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[26]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[27]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[28]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[29]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[30]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out3[31]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 16
+    Warning (13410): Pin "out0_16[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out0_16[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 17
+    Warning (13410): Pin "out1_16[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out1_16[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 18
+    Warning (13410): Pin "out2_16[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out2_16[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 19
+    Warning (13410): Pin "out3_16[0]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[1]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[2]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[3]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[4]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[5]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[6]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[7]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[8]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[9]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[10]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[11]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[12]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[13]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[14]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+    Warning (13410): Pin "out3_16[15]" is stuck at GND File: D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/fft_4point_tb.sv Line: 20
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/output_files/fft_lab_1.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 192 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 0 input pins
+    Info (21059): Implemented 192 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 281 warnings
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Mon May 29 15:26:25 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:40
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 5 fft/output_files/fft_lab_1.map.smsg.
+
+

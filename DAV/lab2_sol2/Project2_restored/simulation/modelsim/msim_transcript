@@ -1,0 +1,1047 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do Project2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/21.1/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd\ yr/1_fall\ quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored {C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:00:36 on Jan 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored" C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv 
+# -- Compiling module tb_labTwo
+# 
+# Top level modules:
+# 	tb_labTwo
+# End time: 15:00:36 on Jan 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd\ yr/1_fall\ quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored {C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/miniALU.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:00:36 on Jan 13,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored" C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/miniALU.sv 
+# -- Compiling module miniALU
+# 
+# Top level modules:
+# 	miniALU
+# End time: 15:00:36 on Jan 13,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.tb_labTwo
+# vsim work.tb_labTwo 
+# Start time: 15:00:41 on Jan 13,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_labTwo(fast)
+add wave -position insertpoint  \
+sim:/tb_labTwo/result \
+sim:/tb_labTwo/operation \
+sim:/tb_labTwo/inB \
+sim:/tb_labTwo/inA
+run -all
+# ** Error: Assertion error.
+#    Time: 5 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 15 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 20 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 25 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 30 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 35 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 40 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 45 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 50 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 55 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 60 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 65 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 70 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 75 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 80 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 85 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 90 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 95 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 100 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 105 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 110 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 115 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 120 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 125 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 130 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 135 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 140 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 145 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 150 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 155 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 160 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 165 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 175 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 185 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 190 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 200 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 205 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 210 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 215 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 220 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 225 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 230 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 235 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 240 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 245 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 250 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 255 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 260 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 265 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 270 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 275 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 280 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 285 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 290 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 295 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 300 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 305 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 310 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 315 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 320 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 325 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 335 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 340 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 350 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 355 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 360 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 365 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 370 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 375 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 380 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 385 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 390 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 395 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 400 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 405 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 410 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 415 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 420 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 425 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 430 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 435 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 440 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 445 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 450 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 455 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 460 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 465 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 470 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 475 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 480 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 485 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 495 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 500 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 505 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 510 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 515 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 520 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 525 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 530 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 535 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 540 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 545 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 550 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 555 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 560 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 565 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 570 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 575 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 580 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 585 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 590 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 595 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 600 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 605 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 610 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 615 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 620 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 625 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 630 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 635 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 640 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 645 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 655 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 660 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 665 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 670 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 675 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 680 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 685 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 690 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 695 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 700 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 705 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 710 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 715 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 720 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 725 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 730 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 735 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 740 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 745 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 750 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 755 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 760 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 765 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 770 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 775 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 780 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 785 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 790 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 795 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 800 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 805 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 815 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 820 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 825 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 830 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 835 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 840 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 845 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 850 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 855 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 860 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 865 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 870 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 875 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 880 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 885 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 890 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 895 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 900 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 905 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 910 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 915 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 920 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 925 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 930 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 935 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 940 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 945 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 950 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 955 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 960 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 965 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 975 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 980 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 985 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 990 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 995 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1 us  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1005 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1010 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1015 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1020 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1025 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1030 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1035 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1040 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1045 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1050 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1055 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1060 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1065 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1070 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1075 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1080 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1085 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1090 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1095 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1100 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1105 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1110 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1115 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1120 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1125 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1135 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1140 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1145 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1150 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1155 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1160 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1165 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1170 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1175 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1180 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1185 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1190 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1195 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1200 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1205 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1210 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1215 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1220 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1225 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1230 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1235 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1240 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1245 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1250 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1255 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1260 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1265 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1270 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1275 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1280 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1285 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1295 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1300 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1305 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1310 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1315 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1320 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1325 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1330 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1335 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1340 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1345 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1350 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1355 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1360 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1365 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1370 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1375 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1380 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1385 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1390 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1395 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1400 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1405 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1410 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1415 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1420 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1425 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1430 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1435 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1440 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1445 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1455 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1460 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1465 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1470 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1475 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1480 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1485 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1490 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1495 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1500 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1505 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1510 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1515 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1520 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1525 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1530 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1535 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1540 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1545 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1550 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1555 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1560 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1565 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1570 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1575 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1580 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1585 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1590 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1595 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1600 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1605 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1615 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1620 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1625 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1630 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1635 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1640 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1645 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1650 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1655 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1660 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1665 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1670 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1675 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1680 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1685 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1690 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1695 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1700 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1705 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1710 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1715 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1720 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1725 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1730 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1735 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1740 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1745 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1750 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1755 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1760 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1765 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1775 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1780 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1785 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1790 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1795 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1800 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1805 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1810 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1815 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1820 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1825 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1830 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1835 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1840 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1845 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1850 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1855 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1860 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1865 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1870 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1875 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1880 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1885 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1890 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1895 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1900 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1905 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1910 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1915 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1920 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1925 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1935 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1940 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1945 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1950 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1955 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1960 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1965 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1970 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1975 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1980 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1985 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 1990 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 1995 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2 us  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2005 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2010 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2015 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2020 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2025 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2030 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2035 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2040 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2045 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2050 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2055 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2060 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2065 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2070 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2075 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2080 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2085 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2095 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2100 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2105 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2110 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2115 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2120 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2125 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2130 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2135 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2140 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2145 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2150 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2155 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2160 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2165 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2170 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2175 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2180 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2185 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2190 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2195 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2200 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2205 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2210 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2215 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2220 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2225 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2230 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2235 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2240 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2245 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2255 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2260 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2265 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2270 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2275 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2280 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2285 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2290 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2295 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2300 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2305 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2310 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2315 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2320 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2325 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2330 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2335 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2340 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2345 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2350 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2355 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2360 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2365 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2370 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2375 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2380 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2385 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2390 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2395 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2400 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2405 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2415 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2420 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2425 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2430 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2435 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2440 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2445 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2450 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2455 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2460 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2465 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2470 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2475 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2480 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2485 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2490 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2495 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2500 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2505 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2510 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2515 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2520 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2525 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2530 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2535 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2540 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2545 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2550 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# ** Error: Assertion error.
+#    Time: 2555 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 24
+# ** Error: Assertion error.
+#    Time: 2560 ns  Scope: tb_labTwo File: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv Line: 27
+# End time: 15:08:18 on Jan 13,2023, Elapsed time: 0:07:37
+# Errors: 493, Warnings: 0

@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/__Project4.auto.qarlog
+
+Archive:	D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/__Project4.auto.qar
+Date:		Thu Jun  1 01:44:47 2023
+Quartus Prime		21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/I2C.sv
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/davexlec5.qip
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/davexlec5.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/db/Project4.qpf
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/i2c_clock.qip
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/i2c_clock.v
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/nunchuckDriver.sv
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/nunchuckTranslator.sv
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/output_files/Project4.flow.rpt
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/output_files/Project4.map.rpt
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/output_files/Project4.map.smsg
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/output_files/Project4.map.summary
+D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/pollingClock.sv
+IOBuffer.sv
+Project4.archive.rpt
+Project4.qsf
+Project4_2ndDraft.qarlog
+__Project4.auto.qarlog
+c:/intelfpga_lite/21.1/quartus/bin64/assignment_defaults.qdf
+davexlec5_bb.v
+davexlec5_inst.v
+i2c_clock.ppf
+i2c_clock_bb.v
+nunch_trans.sv
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

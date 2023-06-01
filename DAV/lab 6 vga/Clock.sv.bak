@@ -1,0 +1,7 @@
+module Clock(clk, op);
+	input clk;
+	output op;
+	always @(posedge clk) begin
+		if 
+	end
+endmodule

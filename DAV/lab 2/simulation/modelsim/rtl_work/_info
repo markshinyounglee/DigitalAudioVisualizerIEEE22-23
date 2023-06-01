@@ -1,0 +1,74 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/simulation/modelsim
+T_opt
+!s110 1673336351
+V1hZbBHii=O=4iiUTYEd5]1
+04 12 4 work sevenSegDisp fast 0
+=1-ec63d7c74f43-63bd161f-16d-6d2c
+!s124 OEM10U7 
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vsevenSegDigit
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1673336189
+!i10b 1
+!s100 3S5TDGgh7^jF?W1W;hWb50
+IV8;=>l_1_OVe^bjTcNSil2
+S1
+R0
+w1669858416
+8C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDigit.sv
+FC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDigit.sv
+!i122 1
+L0 1 34
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2021.2;73
+r1
+!s85 0
+31
+!s108 1673336189.000000
+!s107 C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDigit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2|C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDigit.sv|
+!i113 0
+Z6 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 !s92 -sv -work work {+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+nseven@seg@digit
+vsevenSegDisp
+R2
+R3
+!i10b 1
+!s100 YUk_nE8NhNi9D`6mFi]UE3
+Ig:aQ810c55J@=4?9@4F_Z1
+S1
+R0
+w1669858478
+8C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDisp.sv
+FC:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDisp.sv
+!i122 0
+L0 1 95
+R4
+R5
+r1
+!s85 0
+31
+!s108 1673336188.000000
+!s107 C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDisp.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2|C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDisp.sv|
+!i113 0
+R6
+R7
+R1
+nseven@seg@disp

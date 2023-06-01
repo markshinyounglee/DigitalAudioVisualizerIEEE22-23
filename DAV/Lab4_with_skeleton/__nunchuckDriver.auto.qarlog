@@ -1,0 +1,31 @@
+Quartus Prime Archive log --	C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/__nunchuckDriver.auto.qarlog
+
+Archive:	C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/__nunchuckDriver.auto.qar
+Date:		Wed Mar  8 23:36:52 2023
+Quartus Prime		21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/I2C.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/IOBuffer.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/db/I2CLab.qpf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/i2cClock.qip
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/i2cClock.v
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuckDriver.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuck_test.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/nunchuck_translator.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.flow.rpt
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.map.rpt
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.map.smsg
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/output_files/nunchuckDriver.map.summary
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/pollingClock.sv
+assignment_defaults.qdf
+i2cClock.ppf
+i2cClock_bb.v
+nunchuckDriver.qsf
+nunchuckDriver.restore.rpt
+nunchuckDriver_assignment_defaults.qdf
+nunchuckDriver_tb.sv
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

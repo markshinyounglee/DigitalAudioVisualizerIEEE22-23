@@ -1,0 +1,233 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "timeOut5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "timeOut0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "beepSound",
+					"strict" : false
+				},
+				{
+					"name" : "resetButton",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[8]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[9]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[7]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[6]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[4]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[5]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[3]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[2]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[0]",
+					"strict" : false
+				},
+				{
+					"name" : "initTime[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "onOffButton",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

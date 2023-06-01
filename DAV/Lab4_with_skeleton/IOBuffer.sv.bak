@@ -1,0 +1,5 @@
+module IOBuffer(in, out, enable, port);
+	
+	//TODO: complete IOBuffer as described in the lab spec.
+
+endmodule

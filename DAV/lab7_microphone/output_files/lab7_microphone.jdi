@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="4d0e8f2b1c9687c03eae"/>
+  </project>
+  <file_info>
+    <file device="10M50DAF484C7G" path="lab7_microphone.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="adc_microphone:UUT" name="UUT">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME adc_microphone HAS_SOPCINFO 1 GENERATION_ID 1682652311"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

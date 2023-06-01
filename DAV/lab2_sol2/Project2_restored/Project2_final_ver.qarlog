@@ -1,0 +1,19 @@
+Quartus Prime Archive log --	C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/Project2_final_ver.qarlog
+
+Archive:	C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/Project2_final_ver.qar
+Date:		Sat Feb 11 18:10:04 2023
+Quartus Prime		21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/Project2.qpf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/Project2.qsf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/assignment_defaults.qdf
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/labTwo.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/miniALU.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/sevenSegDigit.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/sevenSegDisp.sv
+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab2_sol2/Project2_restored/tb_labTwo.sv
+	======= Total: 8 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

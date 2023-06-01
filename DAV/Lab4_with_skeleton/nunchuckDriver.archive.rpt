@@ -1,0 +1,107 @@
+Archive Project report for nunchuckDriver
+Wed Mar  8 23:36:52 2023
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Wed Mar  8 23:36:52 2023 ;
+; Revision Name          ; nunchuckDriver                        ;
+; Top-level Entity Name  ; nunchuck_led_test                     ;
+; Family                 ; MAX 10                                ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Critical Warning: Analysis & Elaboration was not run successfully.
+    Critical Warning: The 'Automatically detected source files' file subset will attempt to guess which files are needed. The archive file will likely be larger than required and may still be incomplete.
+Info: Parsing: nunchuckDriver_tb.sv
+Info: Parsing: nunchuckDriver.sv
+Info: Parsing: I2C.sv
+Info: Parsing: IOBuffer.sv
+Info: Parsing: nunchuck_translator.sv
+Info: Parsing: nunchuck_test.sv
+Info: Parsing: pollingClock.sv
+Info: Parsing: i2cClock.v
+Info: Parsing: i2cClock_bb.v
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/Lab4_with_skeleton/I2CLab_03082023.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'nunchuckDriver.archive.rpt'
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/21.1/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 10 errors, 4 warnings
+    Error: Peak virtual memory: 4838 megabytes
+    Error: Processing ended: Wed Mar  8 23:36:52 2023
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:11
+
+
++-----------------------------------------+
+; Files Archived                          ;
++-----------------------------------------+
+; File Name                               ;
++-----------------------------------------+
+; assignment_defaults.qdf                 ;
+; I2C.sv                                  ;
+; i2cClock.ppf                            ;
+; i2cClock.qip                            ;
+; i2cClock.v                              ;
+; i2cClock_bb.v                           ;
+; I2CLab.qpf                              ;
+; IOBuffer.sv                             ;
+; nunchuck_test.sv                        ;
+; nunchuck_translator.sv                  ;
+; nunchuckDriver.qsf                      ;
+; nunchuckDriver.restore.rpt              ;
+; nunchuckDriver.sv                       ;
+; nunchuckDriver_assignment_defaults.qdf  ;
+; nunchuckDriver_tb.sv                    ;
+; output_files/nunchuckDriver.flow.rpt    ;
+; output_files/nunchuckDriver.map.rpt     ;
+; output_files/nunchuckDriver.map.smsg    ;
+; output_files/nunchuckDriver.map.summary ;
+; pollingClock.sv                         ;
++-----------------------------------------+
+
+

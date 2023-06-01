@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -892.281
+TNS   : -8922.095
+
+Type  : Slow 1200mV 85C Model Setup 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : -11.228
+TNS   : -65.226
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : 5.948
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : 4.538
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : 4.575
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -884.182
+TNS   : -8841.213
+
+Type  : Slow 1200mV 0C Model Setup 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : -9.854
+TNS   : -56.750
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : 4.612
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 4.554
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : 4.631
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -844.176
+TNS   : -8441.425
+
+Type  : Fast 1200mV 0C Model Setup 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : -3.675
+TNS   : -20.629
+
+Type  : Fast 1200mV 0C Model Hold 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : -0.288
+TNS   : -0.537
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : 4.315
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UUT|adc_mega_0|ADC_CTRL|adc_pll|auto_generated|pll1|clk[0]'
+Slack : 4.903
+TNS   : 0.000
+
+------------------------------------------------------------

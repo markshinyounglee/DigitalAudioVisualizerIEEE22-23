@@ -1,0 +1,31 @@
+# system info adc_microphone on 2023.04.27.20:25:04
+system_info:
+name,value
+DEVICE,10M50DAF484C7G
+DEVICE_FAMILY,MAX 10
+GENERATION_ID,1682652298
+#
+#
+# Files generated for adc_microphone on 2023.04.27.20:25:04
+files:
+filepath,kind,attributes,module,is_top
+simulation/adc_microphone.v,VERILOG,,adc_microphone,true
+simulation/submodules/altera_up_avalon_adv_adc.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_control.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_control_avrg_fifo.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_control_fsm.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_sample_store.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_sample_store_ram.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_sequencer.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_sequencer_csr.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/altera_modular_adc_sequencer_ctrl.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/chsel_code_converter_sw_to_hw.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/DE10_Lite_ADC_Core_modular_adc_0.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/fiftyfivenm_adcblock_primitive_wrapper.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/fiftyfivenm_adcblock_top_wrapper.v,VERILOG,,adc_microphone_adc_mega_0,false
+simulation/submodules/adc_microphone_adc_mega_0.v,VERILOG,,adc_microphone_adc_mega_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+adc_microphone.adc_mega_0,adc_microphone_adc_mega_0

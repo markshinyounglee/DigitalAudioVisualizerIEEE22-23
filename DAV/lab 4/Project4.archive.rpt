@@ -1,0 +1,112 @@
+Archive Project report for Project4
+Thu Jun  1 01:44:49 2023
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2021  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Thu Jun  1 01:44:49 2023 ;
+; Revision Name          ; Project4                              ;
+; Top-level Entity Name  ; Project4                              ;
+; Family                 ; MAX 10                                ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Critical Warning: Analysis & Elaboration was not run successfully.
+    Critical Warning: The 'Automatically detected source files' file subset will attempt to guess which files are needed. The archive file will likely be larger than required and may still be incomplete.
+Info: Parsing: nunchuckDriver.sv
+Info: Parsing: pollingClock.sv
+Info: Parsing: davexlec5.v
+Info: Parsing: davexlec5_inst.v
+Info: Parsing: davexlec5_bb.v
+Info: Parsing: i2c_clock.v
+Info: Parsing: i2c_clock_bb.v
+Info: Parsing: I2C.sv
+Info: Parsing: nunchuckTranslator.sv
+Info: Parsing: IOBuffer.sv
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'D:/MSI_Backup/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 4/Project4_latest.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'Project4.archive.rpt'
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/21.1/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 5 errors, 4 warnings
+    Error: Peak virtual memory: 4844 megabytes
+    Error: Processing ended: Thu Jun  1 01:44:49 2023
+    Error: Elapsed time: 00:00:23
+    Error: Total CPU time (on all processors): 00:00:45
+
+
++--------------------------------------------------------------+
+; Files Archived                                               ;
++--------------------------------------------------------------+
+; File Name                                                    ;
++--------------------------------------------------------------+
+; __Project4.auto.qarlog                                       ;
+; c:/intelfpga_lite/21.1/quartus/bin64/assignment_defaults.qdf ;
+; davexlec5.qip                                                ;
+; davexlec5.v                                                  ;
+; davexlec5_bb.v                                               ;
+; davexlec5_inst.v                                             ;
+; I2C.sv                                                       ;
+; i2c_clock.ppf                                                ;
+; i2c_clock.qip                                                ;
+; i2c_clock.v                                                  ;
+; i2c_clock_bb.v                                               ;
+; IOBuffer.sv                                                  ;
+; nunch_trans.sv                                               ;
+; nunchuckDriver.sv                                            ;
+; nunchuckTranslator.sv                                        ;
+; output_files/Project4.flow.rpt                               ;
+; output_files/Project4.map.rpt                                ;
+; output_files/Project4.map.smsg                               ;
+; output_files/Project4.map.summary                            ;
+; pollingClock.sv                                              ;
+; Project4.archive.rpt                                         ;
+; Project4.qpf                                                 ;
+; Project4.qsf                                                 ;
+; Project4_2ndDraft.qarlog                                     ;
++--------------------------------------------------------------+
+
+

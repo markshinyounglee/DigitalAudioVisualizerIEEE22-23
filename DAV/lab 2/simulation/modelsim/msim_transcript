@@ -1,0 +1,71 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do Project2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/21.1/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd\ yr/1_fall\ quarter/Extracurriculars/DAV/lab\ 2 {C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDisp.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 23:36:28 on Jan 09,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2" C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDisp.sv 
+# -- Compiling module sevenSegDisp
+# 
+# Top level modules:
+# 	sevenSegDisp
+# End time: 23:36:29 on Jan 09,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd\ yr/1_fall\ quarter/Extracurriculars/DAV/lab\ 2 {C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDigit.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 23:36:29 on Jan 09,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2" C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/sevenSegDigit.sv 
+# -- Compiling module sevenSegDigit
+# 
+# Top level modules:
+# 	sevenSegDigit
+# End time: 23:36:29 on Jan 09,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd\ yr/1_fall\ quarter/Extracurriculars/DAV/lab\ 2 {C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/labTwo.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 23:36:29 on Jan 09,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2" C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/labTwo.sv 
+# -- Compiling module labTwo
+# ** Error: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/labTwo.sv(23): (vlog-2110) Illegal reference to net "indicators".
+# ** Error: C:/Users/joing/OneDrive/Documents/_UCLA/2nd yr/1_fall quarter/Extracurriculars/DAV/lab 2/labTwo.sv(23): (vlog-2110) Illegal reference to net "indicators".
+# End time: 23:36:29 on Jan 09,2023, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/21.1/questa_fse/win64/vlog failed.
+# Error in macro ./Project2_run_msim_rtl_verilog.do line 10
+# C:/intelFPGA_lite/21.1/questa_fse/win64/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/joing/OneDrive/Documents/_UCLA/2nd\ yr/1_fall\ quarter/Extracurriculars/DAV/lab\ 2 {C:/Users/joing/OneDrive/Docum..."
+vsim work.sevenSegDisp
+# vsim work.sevenSegDisp 
+# Start time: 23:39:10 on Jan 09,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.sevenSegDisp(fast)
+add wave -position insertpoint  \
+sim:/sevenSegDisp/value
+run -all
+# End time: 23:53:36 on Jan 09,2023, Elapsed time: 0:14:26
+# Errors: 0, Warnings: 0

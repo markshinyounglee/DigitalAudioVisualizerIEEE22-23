@@ -1,0 +1,3 @@
+module I2C(i2c_clock, reset, deviceAddr, addr, numBytes, dataIn, dataOut, write, start, done, SCLpin, SDApin);
+
+endmodule
